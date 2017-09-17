@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/jcommsc.iml" filepath="$PROJECT_DIR$/jcommsc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-common/springcloud-common.iml" filepath="$PROJECT_DIR$/springcloud-common/springcloud-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-config-server/springcloud-config-server.iml" filepath="$PROJECT_DIR$/springcloud-config-server/springcloud-config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-eureka-server/springcloud-eureka-server.iml" filepath="$PROJECT_DIR$/springcloud-eureka-server/springcloud-eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-gateway/springcloud-gateway.iml" filepath="$PROJECT_DIR$/springcloud-gateway/springcloud-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-hystrix-dashboard/springcloud-hystrix-dashboard.iml" filepath="$PROJECT_DIR$/springcloud-hystrix-dashboard/springcloud-hystrix-dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-hystrix-turbine/springcloud-hystrix-turbine.iml" filepath="$PROJECT_DIR$/springcloud-hystrix-turbine/springcloud-hystrix-turbine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-infrastructure/springcloud-infrastructure.iml" filepath="$PROJECT_DIR$/springcloud-infrastructure/springcloud-infrastructure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-service-order/springcloud-service-order.iml" filepath="$PROJECT_DIR$/springcloud-service-order/springcloud-service-order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-service-order-api/springcloud-service-order-api.iml" filepath="$PROJECT_DIR$/springcloud-service-order-api/springcloud-service-order-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-service-user/springcloud-service-user.iml" filepath="$PROJECT_DIR$/springcloud-service-user/springcloud-service-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-service-user-api/springcloud-service-user-api.iml" filepath="$PROJECT_DIR$/springcloud-service-user-api/springcloud-service-user-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-static/springcloud-static.iml" filepath="$PROJECT_DIR$/springcloud-static/springcloud-static.iml" />
+    </modules>
+  </component>
+</project>
