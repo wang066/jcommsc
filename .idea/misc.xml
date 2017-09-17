@@ -4,6 +4,18 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud-common/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud-static/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud-service-user/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud-config-server/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud-eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud-service-order/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud-infrastructure/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud-hystrix-turbine/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud-service-user-api/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud-hystrix-dashboard/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud-service-order-api/pom.xml" />
       </list>
     </option>
   </component>
