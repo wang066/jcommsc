@@ -1,13 +1,10 @@
 package cn.jcomm.test.thridpack.packtest.quartz._example1;
 
-import org.apache.log4j.PropertyConfigurator;
 import org.joda.time.DateTime;
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.Resource;
 
 import java.io.IOException;
 import java.util.Date;
@@ -21,8 +18,8 @@ public class HelloJobTest implements Job {
 
     public static void main(String[] args) throws SchedulerException, IOException {
 
-        Resource resource = new ClassPathResource("config/log4j.properties");
-        PropertyConfigurator.configure(resource.getInputStream());
+//        Resource resource = new ClassPathResource("config/log4j.properties");
+//        PropertyConfigurator.configure(resource.getInputStream());
         org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger(HelloJobTest.class);
 
         System.out.println("------- Initializing ----------------------");

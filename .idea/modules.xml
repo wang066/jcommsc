@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/servlet-sample/servlet-sample.iml" filepath="$PROJECT_DIR$/servlet-sample/servlet-sample.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-sample/springboot-sample.iml" filepath="$PROJECT_DIR$/springboot-sample/springboot-sample.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud-static/springcloud-static.iml" filepath="$PROJECT_DIR$/springcloud-static/springcloud-static.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thridpack-sample/thridpack-sample.iml" filepath="$PROJECT_DIR$/thridpack-sample/thridpack-sample.iml" />
     </modules>
   </component>
 </project>

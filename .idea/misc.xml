@@ -77,10 +77,11 @@
         <option value="$PROJECT_DIR$/springboot-sample/pom.xml" />
         <option value="$PROJECT_DIR$/springcloud-static/pom.xml" />
         <option value="$PROJECT_DIR$/servlet-sample/pom.xml" />
+        <option value="$PROJECT_DIR$/thridpack-sample/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_3" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

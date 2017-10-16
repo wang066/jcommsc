@@ -1,4 +1,4 @@
-//package cn.jcomm.test.pack;
+package cn.jcomm.test.thridpack.genid;//package cn.jcomm.test.pack;
 //
 //import org.junit.Test;
 //import org.junit.runner.RunWith;

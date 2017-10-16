@@ -3,8 +3,6 @@ package cn.jcomm.test.thridpack.packtest.log4j;
 import junit.framework.TestCase;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.Resource;
 
 import java.io.IOException;
 
@@ -17,8 +15,8 @@ public class Log4jTest extends TestCase {
 
     public static void main(String[] args) throws IOException {
         // System.out.println("This is println message.");
-        Resource resource = new ClassPathResource("config/log4j.properties");
-        PropertyConfigurator.configure(resource.getInputStream());
+//        Resource resource = new ClassPathResource("config/log4j.properties");
+//        PropertyConfigurator.configure(resource.getInputStream());
         Logger logger = Logger.getLogger(Log4jTest.class);
         // 记录debug级别的信息
         logger.debug("This is debug message.");

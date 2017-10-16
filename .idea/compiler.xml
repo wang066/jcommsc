@@ -10,6 +10,7 @@
         <module name="servlet-sample" />
         <module name="springboot-sample" />
         <module name="springcloud-static" />
+        <module name="thridpack-sample" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
@@ -17,6 +18,7 @@
       <module name="servlet-sample" target="1.8" />
       <module name="springboot-sample" target="1.8" />
       <module name="springcloud-static" target="1.8" />
+      <module name="thridpack-sample" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
