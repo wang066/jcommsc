@@ -1,4 +1,4 @@
-package cn.jcomm.test.other;
+package cn.jcomm.test.thridpack.other;
 
 /**
  * Created by jowang on 2016/11/18 0018.

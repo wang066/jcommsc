@@ -1,4 +1,4 @@
-package cn.jcomm.test.other;//package cn.jcomm.test.thridpack.mytest;
+package cn.jcomm.test.thridpack.other;//package cn.jcomm.test.thridpack.mytest;
 //
 //import org.redisson.Redisson;
 //import org.redisson.api.RLock;

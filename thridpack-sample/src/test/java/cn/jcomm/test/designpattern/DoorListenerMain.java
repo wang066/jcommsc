@@ -1,4 +1,4 @@
-package cn.jcomm.test.other;
+package cn.jcomm.test.designpattern;
 
 import java.util.Collection;
 import java.util.EventListener;

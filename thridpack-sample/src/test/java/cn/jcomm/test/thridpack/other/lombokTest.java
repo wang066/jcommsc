@@ -1,4 +1,4 @@
-package cn.jcomm.test.other;
+package cn.jcomm.test.thridpack.other;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

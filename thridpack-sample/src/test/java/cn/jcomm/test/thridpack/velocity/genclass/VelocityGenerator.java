@@ -1,4 +1,4 @@
-package cn.jcomm.test.velocity.genclass;
+package cn.jcomm.test.thridpack.velocity.genclass;
 
 import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;

@@ -1,9 +1,9 @@
-package cn.jcomm.test.other;
+package cn.jcomm.test.thridpack.other;
 
 /**
  * Created by jowang on 2016/11/21 0021.
  */
-public class SingletonMain {
+public class SingletonTest {
 
     public static void main(String[] args) {
         System.out.println(Singleton.getInstance().i);

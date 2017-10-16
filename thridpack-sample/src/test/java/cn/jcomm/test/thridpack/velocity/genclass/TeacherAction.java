@@ -1,4 +1,4 @@
-package cn.jcomm.test.velocity.genclass;//
+package cn.jcomm.test.thridpack.velocity.genclass;//
 //package com.liuxiang.velocity.action;
 //
 //import java.util.List;
