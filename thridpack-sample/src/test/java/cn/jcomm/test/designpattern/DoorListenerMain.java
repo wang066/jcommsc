@@ -26,7 +26,6 @@ public class DoorListenerMain {
                 }
             }
         };
-
         doorManager.addDoorListener(listener);
 
         doorManager.fireWorkspaceOpened();
