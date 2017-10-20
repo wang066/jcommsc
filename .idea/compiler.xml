@@ -7,10 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="jcommsc" />
-        <module name="servlet-sample" />
-        <module name="springboot-sample" />
         <module name="springcloud-static" />
-        <module name="thridpack-sample" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">

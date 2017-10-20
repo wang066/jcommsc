@@ -74,10 +74,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/springboot-sample/pom.xml" />
         <option value="$PROJECT_DIR$/springcloud-static/pom.xml" />
-        <option value="$PROJECT_DIR$/servlet-sample/pom.xml" />
-        <option value="$PROJECT_DIR$/thridpack-sample/pom.xml" />
       </list>
     </option>
   </component>
