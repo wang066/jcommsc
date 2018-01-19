@@ -20,16 +20,6 @@ public class AESUtils {
     public static final String key0 = "455e3a9af9d01fe39368bfe4f3769b0bed92c3a92992f7f40c4265faf4799f62e9405bc80115d0cb3aedb52d88241a45b9e25142d8cb4a87bd1192ff567c89b5d8e13eeda02b2b6442d59667217b3aedbe9953b2cc3132093d882a3094934a381690c958281870a185fe21390af9865a007771d116e12a3254ccbfbc9511f76a9b82fd48e4";
     public static final String key1 = "8HGUkCAUtzBwDHg1";
 
-    public static void main(String[] args) throws Exception {
-//        String content = String.valueOf("{\"areaCode\":\"339901\",\"imid\":\"193707\",\"taxno\":\"339901999999155\"}");
-//        content = org.apache.commons.codec.binary.Base64.encodeBase64String(content.getBytes());
-//        System.out.println(content);
-//        System.out.println(parseByte2HexStr(aesEncryptToBytesC(content, key1)));
-//        System.out.println(org.apache.commons.codec.binary.Base64.encodeBase64String(aesEncryptToBytesC(content, key1)));
-//        System.out.println(new String(org.apache.commons.codec.binary.Base64.decodeBase64(aesDecryptByBytesC(org.apache.commons.codec.binary.Base64.decodeBase64("EFxeUOETX1cwDY+36zYfK6y0SVUxkwEjPQc6IV8Lu3fhDjs+OcKESSYK9AodMQ2k+Ma0iC7B7Oun26H5t2wGbTRat5caTgJLPkJ7te45oMQaquDmnt3go9tgqg+e6fAv"), key1))));
-    }
-
-
     /**
      * AES加密
      *
@@ -144,8 +134,9 @@ public class AESUtils {
      * @return
      */
     public static byte[] parseHexStr2Byte(String hexStr) {
-        if (hexStr.length() < 1)
+        if (hexStr.length() < 1) {
             return null;
+        }
         byte[] result = new byte[hexStr.length() / 2];
         for (int i = 0; i < hexStr.length() / 2; i++) {
             int high = Integer.parseInt(hexStr.substring(i * 2, i * 2 + 1), 16);
