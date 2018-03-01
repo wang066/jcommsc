@@ -6,7 +6,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="jcommsc" />
         <module name="springcloud-common" />
         <module name="springcloud-config-server" />
         <module name="springcloud-eureka-server" />
@@ -22,7 +21,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="jcommsc" target="1.5" />
+      <module name="jcommsc" target="1.8" />
       <module name="servlet-sample" target="1.8" />
       <module name="springboot-sample" target="1.8" />
       <module name="springcloud-common" target="1.8" />
