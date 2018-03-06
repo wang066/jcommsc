@@ -22,8 +22,6 @@
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="jcommsc" target="1.8" />
-      <module name="servlet-sample" target="1.8" />
-      <module name="springboot-sample" target="1.8" />
       <module name="springcloud-common" target="1.8" />
       <module name="springcloud-config-server" target="1.8" />
       <module name="springcloud-eureka-server" target="1.8" />
@@ -36,7 +34,6 @@
       <module name="springcloud-service-user" target="1.8" />
       <module name="springcloud-service-user-api" target="1.8" />
       <module name="springcloud-static" target="1.8" />
-      <module name="thridpack-sample" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
