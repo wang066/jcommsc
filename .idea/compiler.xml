@@ -17,7 +17,6 @@
         <module name="springcloud-service-order-api" />
         <module name="springcloud-service-user" />
         <module name="springcloud-service-user-api" />
-        <module name="springcloud-static" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">

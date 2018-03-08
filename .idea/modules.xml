@@ -14,7 +14,6 @@
       <module fileurl="file://$PROJECT_DIR$/springcloud-service-order-api/springcloud-service-order-api.iml" filepath="$PROJECT_DIR$/springcloud-service-order-api/springcloud-service-order-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud-service-user/springcloud-service-user.iml" filepath="$PROJECT_DIR$/springcloud-service-user/springcloud-service-user.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud-service-user-api/springcloud-service-user-api.iml" filepath="$PROJECT_DIR$/springcloud-service-user-api/springcloud-service-user-api.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springcloud-static/springcloud-static.iml" filepath="$PROJECT_DIR$/springcloud-static/springcloud-static.iml" />
     </modules>
   </component>
 </project>
