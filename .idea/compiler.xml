@@ -7,12 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springcloud-common" />
+        <module name="springcloud-common (1)" />
         <module name="springcloud-config-server" />
         <module name="springcloud-eureka-server" />
         <module name="springcloud-gateway" />
         <module name="springcloud-hystrix-dashboard" />
         <module name="springcloud-hystrix-turbine" />
         <module name="springcloud-infrastructure" />
+        <module name="springcloud-job" />
         <module name="springcloud-service-order" />
         <module name="springcloud-service-order-api" />
         <module name="springcloud-service-user" />
@@ -22,12 +24,14 @@
     <bytecodeTargetLevel target="1.8">
       <module name="jcommsc" target="1.8" />
       <module name="springcloud-common" target="1.8" />
+      <module name="springcloud-common (1)" target="1.8" />
       <module name="springcloud-config-server" target="1.8" />
       <module name="springcloud-eureka-server" target="1.8" />
       <module name="springcloud-gateway" target="1.8" />
       <module name="springcloud-hystrix-dashboard" target="1.8" />
       <module name="springcloud-hystrix-turbine" target="1.8" />
       <module name="springcloud-infrastructure" target="1.8" />
+      <module name="springcloud-job" target="1.8" />
       <module name="springcloud-service-order" target="1.8" />
       <module name="springcloud-service-order-api" target="1.8" />
       <module name="springcloud-service-user" target="1.8" />

@@ -9,11 +9,12 @@
     <file url="file://$PROJECT_DIR$/springcloud-hystrix-dashboard" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud-hystrix-turbine" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud-infrastructure" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud-job" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud-job" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud-service-order" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud-service-order-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud-service-user" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud-service-user-api" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springcloud-static" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

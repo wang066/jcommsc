@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/springcloud-hystrix-dashboard/springcloud-hystrix-dashboard.iml" filepath="$PROJECT_DIR$/springcloud-hystrix-dashboard/springcloud-hystrix-dashboard.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud-hystrix-turbine/springcloud-hystrix-turbine.iml" filepath="$PROJECT_DIR$/springcloud-hystrix-turbine/springcloud-hystrix-turbine.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud-infrastructure/springcloud-infrastructure.iml" filepath="$PROJECT_DIR$/springcloud-infrastructure/springcloud-infrastructure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud-job/springcloud-job.iml" filepath="$PROJECT_DIR$/springcloud-job/springcloud-job.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud-service-order/springcloud-service-order.iml" filepath="$PROJECT_DIR$/springcloud-service-order/springcloud-service-order.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud-service-order-api/springcloud-service-order-api.iml" filepath="$PROJECT_DIR$/springcloud-service-order-api/springcloud-service-order-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud-service-user/springcloud-service-user.iml" filepath="$PROJECT_DIR$/springcloud-service-user/springcloud-service-user.iml" />

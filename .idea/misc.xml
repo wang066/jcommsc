@@ -85,6 +85,7 @@
         <option value="$PROJECT_DIR$/springcloud-hystrix-turbine/pom.xml" />
         <option value="$PROJECT_DIR$/springcloud-hystrix-dashboard/pom.xml" />
         <option value="$PROJECT_DIR$/springcloud-service-order-api/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud-job/pom.xml" />
       </list>
     </option>
   </component>

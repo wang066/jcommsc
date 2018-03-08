@@ -1,0 +1,2 @@
+view object
+主要组装web层对象
