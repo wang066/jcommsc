@@ -13,8 +13,8 @@
     <!-- 启用注解驱动的定时任务 -->
     <task:annotation-driven executor="executor" scheduler="scheduler" proxy-target-class="true"/>
     <!--<task:scheduled-tasks scheduler="scheduler">-->
-        <!--&lt;!&ndash; 统计失败邮件定时重新发送 &ndash;&gt;-->
-        <!--<task:scheduled ref="sendMail" method="sendMail" cron="0/5 * * * * ?"/>-->
+    <!--&lt;!&ndash; 统计失败邮件定时重新发送 &ndash;&gt;-->
+    <!--<task:scheduled ref="sendMail" method="sendMail" cron="0/5 * * * * ?"/>-->
     <!--</task:scheduled-tasks>-->
 
     <bean name="SendMail" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
