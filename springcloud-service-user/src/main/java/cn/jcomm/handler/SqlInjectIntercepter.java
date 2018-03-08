@@ -22,8 +22,8 @@ public class SqlInjectIntercepter implements HandlerInterceptor {
         while (names.hasMoreElements()) {
             String name = names.nextElement();
             String[] values = request.getParameterValues(name);
-            for (int i = 0; i < values.length; i++) {
-                //进行校验
+//            for (int i = 0; i < values.length; i++) {
+//                //进行校验
 //                if(Utility.hasAttackStr(values[i])){
 //                    if(!(values[i].equals("DELETE") && name.equals("_method")) ){
 //                        response.setContentType("text/html;charset=utf-8");
@@ -31,7 +31,7 @@ public class SqlInjectIntercepter implements HandlerInterceptor {
 //                        return false;
 //                    }
 //                }
-            }
+//            }
         }
         return true;
 

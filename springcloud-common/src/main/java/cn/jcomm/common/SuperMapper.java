@@ -1,4 +1,4 @@
-package cn.jcomm.common._interface;
+package cn.jcomm.common;
 
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 

@@ -10,9 +10,9 @@ import org.springframework.scheduling.annotation.EnableAsync;
 //@EnableDiscoveryClient
 public class SpringcloudServiceUserApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringcloudServiceUserApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SpringcloudServiceUserApplication.class, args);
+    }
 
 //    @Bean
 //    public CommandLineRunner commandLineRunner(ApplicationContext ctx){

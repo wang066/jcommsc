@@ -1,6 +1,6 @@
 package cn.jcomm.dao;
 
-import cn.jcomm.common._interface.SuperMapper;
+import cn.jcomm.common.SuperMapper;
 import cn.jcomm.model.DO.City;
 import org.springframework.stereotype.Repository;
 
