@@ -9,6 +9,6 @@ import org.springframework.context.annotation.ImportResource;
 public class SpringcloudServiceJobApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringcloudServiceJobApiApplication.class, args);
+	    SpringApplication.run(SpringcloudServiceJobApiApplication.class, args);
 	}
 }

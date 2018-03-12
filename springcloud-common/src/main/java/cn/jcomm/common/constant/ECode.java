@@ -10,14 +10,14 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum ECode {
 
-    Sys_Fail(100, "系统错误", "SysFail");
+    SysFail(100, "系统错误", "发生系统错误了");
 
     @Getter
     private Integer index;
     @Getter
-    private String cnName;
+    private String name;
     @Getter
-    private String enName;
+    private String desc;
 
 
 }

@@ -14,11 +14,11 @@ import java.util.List;
 @AllArgsConstructor
 public class Page<T> {
     //商品集合
-    private List<T> itemList;
+    private List<T> list;
     //总记录数
-    private long recordCount;
+    private int count;
     //总页数
-    private long pageCount;
+    private int size;
     //当前页
-    private long currentPage;
+    private int page;
 }
