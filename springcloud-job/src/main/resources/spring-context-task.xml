@@ -17,7 +17,7 @@
     <!--<task:scheduled ref="sendMail" method="sendMail" cron="0/5 * * * * ?"/>-->
     <!--</task:scheduled-tasks>-->
 
-    <bean name="SendMail" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+    <bean name="SendMailJob" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
         <property name="jobClass" value="cn.jcomm.task.SendMail"/>
         <property name="jobDataAsMap">
             <map>
@@ -28,21 +28,20 @@
     </bean>
 
 
-    <bean id="cmpCronTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
-        <property name="jobDetail" ref="SendMail"/>
-        <!--执行时间每天2:00-->
+    <bean id="SendMailTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="SendMailJob"/>
         <property name="cronExpression" value="0/5 * * * * ?"/>
     </bean>
 
     <bean id="cmpScheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
         <property name="jobDetails">
             <list>
-                <ref bean="SendMail"/>
+                <ref bean="SendMailJob"/>
             </list>
         </property>
         <property name="triggers">
             <list>
-                <ref bean="cmpCronTrigger"/>
+                <ref bean="SendMailTrigger"/>
             </list>
         </property>
     </bean>
