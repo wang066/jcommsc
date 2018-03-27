@@ -63,6 +63,7 @@ public class _Test5 extends TestCase {
     }
 
     public void test2() throws Exception {
+
         LockSupport.unpark(Thread.currentThread());
         LockSupport.park();
         System.out.println("ok");
