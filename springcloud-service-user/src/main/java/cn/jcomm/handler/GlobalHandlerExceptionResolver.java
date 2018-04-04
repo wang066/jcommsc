@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.ConstraintViolation;
+import javax.validation.ConstraintViolationException;
 
 /**
  * 搜索 全局异常处理
@@ -21,25 +23,43 @@ public class GlobalHandlerExceptionResolver {
 
 
     @ExceptionHandler(value = RuntimeException.class)
-    public ModelAndView defaultErrorHandler(HttpServletRequest req, Exception e) throws Exception {
+    public ModelAndView defaultErrorHandler(HttpServletRequest req, Exception e) {
 
-        log.error("", e);
+        log.error("defaultErrorHandler:",e);
 
         ModelAndView mav = new ModelAndView();
         mav.addObject("exception", e);
         mav.addObject("url", req.getRequestURL());
         mav.setViewName("error");
+
         return mav;
     }
 
     @ExceptionHandler(value = ApiException.class)
     @ResponseBody
-    public Result<String> jsonErrorHandler(HttpServletRequest req, ApiException e) throws Exception {
+    public Result<String> jsonErrorHandler(HttpServletRequest req, ApiException e)  {
 
         //info 是参数类型
-        log.error(JSON.toJSONString(e.getInfo()), e);
+        if(e.isWriteLog()){
+            log.error(JSON.toJSONString(e.getInfo()), e);
+        }else {
+            log.error("", e);
+        }
+
 
         return Result.error(e.getCode(), e.getMsg());
+    }
+
+    @ExceptionHandler(value = ConstraintViolationException.class)
+    @ResponseBody
+    public String jsonErrorHandler(HttpServletRequest req, ConstraintViolationException e)  {
+        StringBuilder messages = new StringBuilder();
+
+        for (ConstraintViolation<?> violation : e.getConstraintViolations()) {
+            messages.append(violation.getMessage() + "\n");
+        }
+
+        return messages.toString();
     }
 
 }
