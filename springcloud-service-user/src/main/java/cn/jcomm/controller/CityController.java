@@ -38,7 +38,7 @@ public class CityController {
             @ApiResponse(code = 400, message = "请求参数没填好"),
     })
     @GetMapping(value = "/api/city/{cityName}")
-    public String get(@PathVariable String cityName) {
+    public String get(@PathVariable  String cityName) {
 
         log.info("查询" + cityName);
 

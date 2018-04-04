@@ -4,6 +4,7 @@ import cn.jcomm.client.SampleClient;
 import cn.jcomm.model.SampleDto;
 import cn.jcomm.service.AsyncService;
 import lombok.extern.slf4j.Slf4j;
+import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -58,7 +59,7 @@ public class SampleController implements SampleClient {
     }
 
     @RequestMapping("/h1")
-    public String home(@RequestParam String email) {
+    public String home(@RequestParam @NotBlank String email) {
         log.info("[email] - [{}]", email);
         return "My Name's :" + "applicationName" + " Email:" + email;
     }
