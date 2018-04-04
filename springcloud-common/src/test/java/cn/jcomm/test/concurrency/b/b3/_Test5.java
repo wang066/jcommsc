@@ -63,8 +63,47 @@ public class _Test5 extends TestCase {
     }
 
     public void test2() throws Exception {
+
         LockSupport.unpark(Thread.currentThread());
         LockSupport.park();
         System.out.println("ok");
+    }
+
+    public void test3() throws Exception {
+        String s=new String("1");
+
+        Thread t1=new Thread(new Runnable() {
+            @Override
+            public void run() {
+                synchronized (new String("1")){
+                    try {
+                        Thread.sleep(1000);
+                        System.out.println("1");
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+
+
+        Thread t2=new Thread(new Runnable() {
+            @Override
+            public void run() {
+                synchronized (new String("1")){
+                    try {
+                        Thread.sleep(1000);
+                        System.out.println("2");
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
+
+        t1.start();
+        t2.start();
+
+        Thread.sleep(5000);
     }
 }

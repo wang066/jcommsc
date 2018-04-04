@@ -6,9 +6,9 @@ import org.springframework.context.annotation.ImportResource;
 
 @SpringBootApplication
 @ImportResource({"classpath:spring-context-task.xml"})
-public class SpringcloudServiceJobApiApplication {
+public class SpringcloudServiceJobApplication {
 
 	public static void main(String[] args) {
-	    SpringApplication.run(SpringcloudServiceJobApiApplication.class, args);
+	    SpringApplication.run(SpringcloudServiceJobApplication.class, args);
 	}
 }
