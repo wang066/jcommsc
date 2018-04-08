@@ -4,8 +4,8 @@ import com.alibaba.fastjson.JSON;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-import static cn.jcomm.common.constant.Const.FAIL;
-import static cn.jcomm.common.constant.Const.SUCCESS;
+import static cn.jcomm.common.constant.SystemConst.FAIL;
+import static cn.jcomm.common.constant.SystemConst.SUCCESS;
 
 /**
  * Created by jowang on 2017/4/20 0020.

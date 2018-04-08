@@ -35,7 +35,6 @@ public class CityServiceImpl implements CityService {
 
     @Override
     public City findByName(String cityName) {
-//        redisTemplate
         City city = new City();
         city.setCityName(cityName);
         return cityRepository.selectOne(city);
