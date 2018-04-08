@@ -6,4 +6,5 @@ package cn.jcomm.common.constant;
  * @description:
  */
 public class ExceptionConst {
+
 }
