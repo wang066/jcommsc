@@ -4,7 +4,7 @@ package cn.jcomm.common.constant;
  * Created by jowang on 2017/4/20 0020.
  * 字符常量
  */
-public final class Const {
+public final class SystemConst {
 
     public static final int SUCCESS = 200;
     public static final int FAIL = 500;
@@ -63,10 +63,14 @@ public final class Const {
      */
     public static final String DATE_FORMAT_TIMESTAMP = "yyyy-MM-dd HH:mm:ss.SSS";
 
-    public static final String ErrorLevel_Fatal = "Fatal";
-    public static final String ErrorLevel_Error = "Error";
-    public static final String ErrorLevel_Warn = "Warn";
-    public static final String ErrorLevel_Info = "Info";
-    public static final String ErrorLevel_Debug = "Debug";
+    public static final String Log_Level_Fatal = "Fatal";
+
+    public static final String Log_Level_Error = "Error";
+
+    public static final String Log_Level_Warn = "Warn";
+
+    public static final String Log_Level_Info = "Info";
+
+    public static final String Log_Level_Debug = "Debug";
 
 }
