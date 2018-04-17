@@ -5,7 +5,7 @@ import org.joda.time.DateTime;
 /**
  * Created by 066 on 2017/6/28 0028.
  */
-public class _Test1 {
+public class StringBuidlerTest {
 
     public static void main(String[] args) {
 
