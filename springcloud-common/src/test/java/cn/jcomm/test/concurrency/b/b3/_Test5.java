@@ -71,6 +71,7 @@ public class _Test5 extends TestCase {
 
     public void test3() throws Exception {
         String s=new String("1");
+        String s1="1";
 
         Thread t1=new Thread(new Runnable() {
             @Override
@@ -90,6 +91,11 @@ public class _Test5 extends TestCase {
         Thread t2=new Thread(new Runnable() {
             @Override
             public void run() {
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 synchronized (new String("1")){
                     try {
                         Thread.sleep(1000);
@@ -104,6 +110,6 @@ public class _Test5 extends TestCase {
         t1.start();
         t2.start();
 
-        Thread.sleep(5000);
+        Thread.sleep(1000);
     }
 }

@@ -24,6 +24,10 @@ public class _Test6 extends TestCase {
 //            int[] ints = new int[1000];
 //            list.add(ints);
 //        }
+        System.out.println(0x7fffffff);
+        System.out.println(Integer.MAX_VALUE);
+        System.out.println(1233123123 >>> 16);
+
 
     }
 
@@ -58,5 +62,14 @@ public class _Test6 extends TestCase {
         t.remove();
         WeakReference<Integer> w = new WeakReference<Integer>(1);
         w.clear();
+    }
+
+    public void test3() {
+        System.out.println(0.3d==0.1*3);
+        toString();
+    }
+
+    public void test4() {
+        System.out.println("1".equalsIgnoreCase("1"));
     }
 }
