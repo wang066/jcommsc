@@ -18,6 +18,8 @@ public class _Test5 extends TestCase {
         ArrayList arrayList = new ArrayList();
         HashMap hashMap = new HashMap();
         ConcurrentHashMap concurrentHashMap = new ConcurrentHashMap();
+        concurrentHashMap.size();
+        concurrentHashMap.mappingCount();
         ExecutorService executorService = new ThreadPoolExecutor(1, 2, 60, TimeUnit.SECONDS, new ArrayBlockingQueue<Runnable>(1000));
         AbstractQueuedSynchronizer abstractQueuedSynchronizer;
 //        for (int i = 0; i < 100; i++) {

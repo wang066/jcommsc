@@ -1,11 +1,9 @@
-package cn.jcomm.test.concurrency.a.a1;//package test.thread.list;
+//package cn.jcomm.test.concurrency.a.a1;
 //
 //import java.util.ArrayList;
 //import java.util.List;
-//import java.util.concurrent.DelayQueue;
-//import java.util.concurrent.Delayed;
-//import java.util.concurrent.ExecutorService;
-//import java.util.concurrent.TimeUnit;
+//import java.util.Random;
+//import java.util.concurrent.*;
 //
 ///**
 // *
@@ -15,15 +13,15 @@ package cn.jcomm.test.concurrency.a.a1;//package test.thread.list;
 //
 //    public static void main(String[] args) {
 //        System.out.println(Integer.MAX_VALUE);
-////        Random rand = new Random(47);
-////        DelayQueue<DelayedTask> queue = new DelayQueue<DelayedTask>();
-////        ExecutorService exec = Executors.newCachedThreadPool();
-////        for (int i = 0; i < 20; i++) {
-////            queue.put(new DelayedTask(rand.nextInt(5000)));
-//////            queue.put(new DelayedTask(i*100));
-////        }
-////        queue.add(new DelayedTask.EndSentinel(5000, exec));
-////        exec.execute(new DelayedTaskConsumer(queue));
+//        Random rand = new Random(47);
+//        DelayQueue<DelayedTask> queue = new DelayQueue<DelayedTask>();
+//        ExecutorService exec = Executors.newCachedThreadPool();
+//        for (int i = 0; i < 20; i++) {
+//            queue.put(new DelayedTask(rand.nextInt(5000)));
+////            queue.put(new DelayedTask(i*100));
+//        }
+//        queue.add(new DelayedTask.EndSentinel(5000, exec));
+//        exec.execute(new DelayedTaskConsumer(queue));
 //    }
 //
 //}
