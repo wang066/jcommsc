@@ -4,6 +4,7 @@ import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
 
+import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
 /**
@@ -36,5 +37,15 @@ public class BookFacadeCglib implements MethodInterceptor {
         BookFacadeCglib cglib = new BookFacadeCglib();
         BookFacadeImp bookCglib = (BookFacadeImp) cglib.getInstance(new BookFacadeImp());
         bookCglib.addBook();
+    }
+}
+
+/**
+ * jdk 动态代理
+ */
+class BookFacadeJDKPorxy implements InvocationHandler{
+
+    @Override public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        return null;
     }
 }
