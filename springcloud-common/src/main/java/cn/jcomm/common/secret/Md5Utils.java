@@ -6,10 +6,11 @@ package cn.jcomm.common.secret;
  * @description:
  */
 public final class Md5Utils {
-private Md5Utils(){
+    private Md5Utils() {
 
-}
-public String md5(){
-return null;
-}
+    }
+
+    public String md5() {
+        return null;
+    }
 }

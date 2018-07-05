@@ -15,27 +15,9 @@ public class BasisException extends RuntimeException {
      */
     protected int code;
 
-    public BasisException(int code, String msgFormat, Object... args) {
-        super(String.format(msgFormat, args));
-        this.code = code;
-        this.msg = String.format(msgFormat, args);
-    }
+    protected boolean writeLog = true;
 
-    public BasisException() {
-        super();
-    }
-
-    public BasisException(String message, Throwable cause) {
-        super(message, cause);
-    }
-
-    public BasisException(Throwable cause) {
-        super(cause);
-    }
-
-    public BasisException(String message) {
-        super(message);
-    }
+    protected Object info;
 
     public String getMsg() {
         return msg;
@@ -45,16 +27,31 @@ public class BasisException extends RuntimeException {
         return code;
     }
 
-    /**
-     * 实例化异常
-     *
-     * @param msgFormat
-     * @param args
-     * @return
-     */
-    public BasisException newInstance(String msgFormat, Object... args) {
-        return new BasisException(this.code, msgFormat, args);
-
+    public boolean isWriteLog() {
+        return writeLog;
     }
 
+    public Object getInfo() {
+        return info;
+    }
+
+    public BasisException setMsg(String msg) {
+        this.msg = msg;
+        return this;
+    }
+
+    public BasisException setCode(int code) {
+        this.code = code;
+        return this;
+    }
+
+    public BasisException setWriteLog(boolean writeLog) {
+        this.writeLog = writeLog;
+        return this;
+    }
+
+    public BasisException setInfo(Object info) {
+        this.info = info;
+        return this;
+    }
 }

@@ -60,12 +60,12 @@ public class UserController extends BaseController{
 
     @GetMapping(value = "/api/user/{id}")
     public String get(@PathVariable Long id) {
-        User user= userService.get(id);
+        User user= userService.find(id);
         return Result.success(user).toJson();
     }
 
     @GetMapping(value = "/api/users/")
     public String getList(@ModelAttribute QueryUser queryUser) {
-        return Result.success(  userService.getList()).toJson();
+        return Result.success(  userService.queryList()).toJson();
     }
 }

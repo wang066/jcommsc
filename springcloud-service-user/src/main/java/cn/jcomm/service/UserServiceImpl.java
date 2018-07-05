@@ -37,12 +37,12 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User get(Long id) {
+    public User find(Long id) {
         return userRepository.selectById(id);
     }
 
     @Override
-    public List<User> getList() {
+    public List<User> queryList() {
         return userRepository.selectList(null);
     }
 
