@@ -1,14 +1,12 @@
 package cn.jcomm.test.designpattern;
 
-import junit.framework.TestCase;
-
 /**
  * @author: jowang
  * @date: 2018-07-07 21:42
- * @description:
+ * @description: 命令模式
  */
-public class CommandTest extends TestCase {
-    public void test(){
+public class CommandTest {
+    public static void main(String[] args) {
         // 创建接收者
         Receiver receiver = new Receiver();
         // 创建命令对象，设定它的接收者
@@ -19,72 +17,73 @@ public class CommandTest extends TestCase {
         // 调用者调用命令
         invoker.invoke();
     }
+}
 
-    interface Command {
 
-        /**
-         * 执行命令
-         */
-        public void execute();
+interface Command {
+
+    /**
+     * 执行命令
+     */
+    public void execute();
+}
+
+class ConcreteCommand implements Command {
+
+    /**
+     * 持有相应的接收者对象
+     */
+    private Receiver receiver = null;
+
+    /**
+     * 构造方法，传入相应的接收者对象
+     *
+     * @param receiver 相应的接收者对象
+     */
+    public ConcreteCommand(Receiver receiver) {
+        this.receiver = receiver;
     }
 
-    class ConcreteCommand implements Command {
+    /**
+     * 执行命令
+     */
+    @Override
+    public void execute() {
+        // 通常会转调接收者对象的相应方法，让接收者来真正执行功能
+        receiver.action();
+    }
+}
 
-        /**
-         * 持有相应的接收者对象
-         */
-        private Receiver receiver = null;
+class Receiver {
 
-        /**
-         * 构造方法，传入相应的接收者对象
-         *
-         * @param receiver 相应的接收者对象
-         */
-        public ConcreteCommand(Receiver receiver) {
-            this.receiver = receiver;
-        }
+    /**
+     * 示意方法，真正执行命令相应的操作
+     */
+    public void action() {
+        System.out.println("接收者开始行动。。。");
+    }
+}
 
-        /**
-         * 执行命令
-         */
-        @Override
-        public void execute() {
-            // 通常会转调接收者对象的相应方法，让接收者来真正执行功能
-            receiver.action();
-        }
+class Invoker {
+
+    /**
+     * 持有命令对象
+     */
+    private Command command = null;
+
+    /**
+     * 设置调用者持有的命令对象
+     *
+     * @param command 命令对象
+     */
+    public void setCommand(Command command) {
+        this.command = command;
     }
 
-    class Receiver {
-
-        /**
-         * 示意方法，真正执行命令相应的操作
-         */
-        public void action() {
-            System.out.println("接收者开始行动。。。");
-        }
-    }
-
-    class Invoker {
-
-        /**
-         * 持有命令对象
-         */
-        private Command command = null;
-
-        /**
-         * 设置调用者持有的命令对象
-         *
-         * @param command 命令对象
-         */
-        public void setCommand(Command command) {
-            this.command = command;
-        }
-
-        /**
-         * 示意方法，调用命令执行请求
-         */
-        public void invoke() {
-            command.execute();
-        }
+    /**
+     * 示意方法，调用命令执行请求
+     */
+    public void invoke() {
+        command.execute();
     }
 }

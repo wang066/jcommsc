@@ -5,7 +5,7 @@ import java.util.Hashtable;
 /**
  * @author: jowang
  * @date: 2018-07-18 18:40
- * @description:
+ * @description: 享元模式
  */
 public class FlyweightTest {
     public static void main(String[] args) {
