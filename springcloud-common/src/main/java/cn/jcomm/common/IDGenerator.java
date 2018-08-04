@@ -1,7 +1,7 @@
 package cn.jcomm.common;
 
 /**
- * 分布式ID生成器
+ * 分布式ID生成器-雪花算法
  *
  */
 public class IDGenerator {
