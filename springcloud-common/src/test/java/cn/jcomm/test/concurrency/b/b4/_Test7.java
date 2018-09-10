@@ -10,34 +10,34 @@ public class _Test7 {
         new A().hello();
     }
 
+    static class B {
+
+        {
+            System.out.println("static b");
+        }
+
+        B() {
+            System.out.println("init b");
+        }
+
+        void hello() {
+            System.out.println("hello b");
+        }
+    }
+
+    public static class A extends B {
+
+        {
+            System.out.println("static a");
+        }
+
+        A() {
+            System.out.println("init a");
+        }
+
+        void hello() {
+            System.out.println("hello a");
+        }
+    }
 }
 
-class B {
-
-    {
-        System.out.println("static b");
-    }
-
-    B() {
-        System.out.println("init b");
-    }
-
-    void hello() {
-        System.out.println("hello b");
-    }
-}
-
-class A extends B {
-
-    {
-        System.out.println("static a");
-    }
-
-    A() {
-        System.out.println("init a");
-    }
-
-    void hello() {
-        System.out.println("hello a");
-    }
-}

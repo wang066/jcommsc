@@ -23,6 +23,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="jcommsc" target="1.8" />
+      <module name="LRPC" target="1.5" />
       <module name="springcloud-common" target="1.8" />
       <module name="springcloud-common (1)" target="1.8" />
       <module name="springcloud-config-server" target="1.8" />

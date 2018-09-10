@@ -1,12 +1,19 @@
 package cn.jcomm.test.concurrency.b.b4;
 
-import junit.framework.TestCase;
-
 import java.lang.ref.WeakReference;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+import java.util.SortedMap;
+import java.util.TreeMap;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.LockSupport;
 import java.util.concurrent.locks.ReentrantLock;
+
+import junit.framework.TestCase;
 
 /**
  * Created by 066 on 2017/6/28 0028.
@@ -137,5 +144,9 @@ public class _Test6 extends TestCase {
 
     public static class RException extends RuntimeException {
 
+    }
+
+    public void test7(){
+        ScheduledExecutorService scheduledExecutorService = Executors.newScheduledThreadPool(1);
     }
 }
