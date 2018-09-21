@@ -1,6 +1,9 @@
 package cn.jcomm.test.concurrency.c;
 
 import java.util.Optional;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 import java.util.stream.Stream;
@@ -55,9 +58,18 @@ public class Test2 extends TestCase {
     public void test4() {
         Stream<String> parallelWords = Stream.of("1", "2", "3").parallel();
         int[] shortWords = new int[12];
+    }
 
+    public void test5() throws InterruptedException {
+        ScheduledExecutorService service= Executors.newScheduledThreadPool(1);
+        service.scheduleWithFixedDelay(()->{
+            System.out.println("start");
+        },0, 1,TimeUnit.SECONDS);
 
-
+        service.schedule(()->{
+            System.out.println("only one");
+        },0, TimeUnit.SECONDS);
+        Thread.sleep(5000);
     }
 
 
