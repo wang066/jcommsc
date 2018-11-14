@@ -3,7 +3,7 @@ package cn.jcomm.test.designpattern.prototype;
 import java.io.*;
 
 /**
- * 简历类  
+ * 简历类
  *
  */
  class Resume implements Serializable,Cloneable {
@@ -20,22 +20,22 @@ import java.io.*;
         this.name = name;
         work = new WorkExperience();
     }
-    //设置个人信息  
+    //设置个人信息
     public void setPersonalInfo(String sex, Integer age){
         this.sex = sex;
         this.age = age;
     }
-    //设置工作经历  
+    //设置工作经历
     public void setWorkExperience(String workDate,String company){
         work.setWorkDate(workDate);
         work.setCompany(company);
     }
-    //显示  
+    //显示
     public void display(){
         System.out.println(String.format("%s %s %s", name,sex,age));
         System.out.println(String.format("工作经历：%s %s", work.getWorkDate(), work.getCompany()));
     }
-    //浅复制  
+    //浅复制
     public Object clone(){
         Object obj = null;
         try {
@@ -45,7 +45,7 @@ import java.io.*;
         }
         return obj;
     }
-    //深复制  
+    //深复制
     public Object deepClone() throws IOException, ClassNotFoundException{
         //将对象写到流里  
         ByteArrayOutputStream bo = new ByteArrayOutputStream();
@@ -57,12 +57,12 @@ import java.io.*;
         return (oi.readObject());
     }
 
-}  
-  
+}
+
 // --------------------------------------------------------------------------------
 
 /**
- * 工作经历类 
+ * 工作经历类
  *
  */
  class WorkExperience implements Serializable {
@@ -82,13 +82,13 @@ import java.io.*;
     public void setCompany(String company) {
         this.company = company;
     }
-}  
-  
-  
+}
+
+
 // --------------------------------------------------------------------------------
 
 /**
- * 客户端调用 
+ * 客户端调用
  *
  */
 public class Prototype {
@@ -103,11 +103,11 @@ public class Prototype {
 
         a.display();
         b.display();
-//      运行结果：a和b的WorkExperience的引用值是一样的，改变b的WorkExperience值，a也会变化  
-//      大鸟 男 29  
-//      工作经历：1998-2006 yy公司  
-//      大鸟 男 25  
-//      工作经历：1998-2006 yy公司  
+//      运行结果：a和b的WorkExperience的引用值是一样的，改变b的WorkExperience值，a也会变化
+//      大鸟 男 29
+//      工作经历：1998-2006 yy公司
+//      大鸟 男 25
+//      工作经历：1998-2006 yy公司
 
 //       demo2
         Resume c = new Resume("大鸟");
@@ -120,11 +120,11 @@ public class Prototype {
 
         c.display();
         d.display();
-//      运行结果：a和b的WorkExperience的引用值是不同的  
-//      大鸟 男 29  
-//      工作经历：1998-2000 xx公司  
-//      大鸟 男 25  
-//      工作经历：1998-2006 yy公司  
+//      运行结果：a和b的WorkExperience的引用值是不同的
+//      大鸟 男 29
+//      工作经历：1998-2000 xx公司
+//      大鸟 男 25
+//      工作经历：1998-2006 yy公司
 
     }
 }
