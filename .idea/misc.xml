@@ -91,6 +91,8 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/LRPC/pom.xml" />
+        <option value="$PROJECT_DIR$/rpc0/pom.xml" />
+        <option value="$PROJECT_DIR$/wangRPC/pom.xml" />
       </set>
     </option>
   </component>

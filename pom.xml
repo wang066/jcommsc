@@ -22,6 +22,8 @@
         <module>springcloud-service-order-api</module>
         <module>springcloud-service-user</module>
         <module>springcloud-service-user-api</module>
+        <module>wangRPC</module>
+        <module>rpc0</module>
     </modules>
     <!-- aliyun maven repo -->
     <repositories>

@@ -8,7 +8,7 @@ import java.util.concurrent.RecursiveTask;
 /**
  * Created by 066 on 2017/6/28 0028.
  */
-public class _Test2 {
+public class _ForkJoinTaskTest2 {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
 //        锁
