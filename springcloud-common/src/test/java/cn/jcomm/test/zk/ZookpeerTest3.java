@@ -21,7 +21,7 @@ package cn.jcomm.test.zk;
 //        try {
 //            client = createSimple(server.getConnectString());
 //            client.start();
-//            client.create().creatingParentsIfNeeded().forPath(PATH, "test".getBytes());
+//            client.create().creatingParentsIfNeeded().forPath(PATH, "Test1".getBytes());
 //            CloseableUtils.closeQuietly(client);
 //
 ////            client = createWithOptions(server.getConnectString(), new ExponentialBackoffRetry(1000, 3), 1000, 1000);

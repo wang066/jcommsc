@@ -1,13 +1,20 @@
 package cn.jcomm.test.concurrency.c;
 
 import java.util.Optional;
+import java.util.Random;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ThreadLocalRandom;
+import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
+import com.google.common.util.concurrent.MoreExecutors;
+import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import junit.framework.TestCase;
 
 /**
@@ -16,6 +23,8 @@ import junit.framework.TestCase;
  * @description:
  */
 public class Test2 extends TestCase {
+
+
     static long facotialRecusive(long n) {
         return n == 1 ? 1 : n * facotialRecusive(n - 1);
     }
@@ -54,24 +63,74 @@ public class Test2 extends TestCase {
         IntStream.range(1, 10).forEach(System.out:: println);
     }
 
-
     public void test4() {
         Stream<String> parallelWords = Stream.of("1", "2", "3").parallel();
         int[] shortWords = new int[12];
     }
 
     public void test5() throws InterruptedException {
-        ScheduledExecutorService service= Executors.newScheduledThreadPool(1);
-        service.scheduleWithFixedDelay(()->{
+        ScheduledExecutorService service = Executors.newScheduledThreadPool(1);
+        service.scheduleWithFixedDelay(() -> {
             System.out.println("start");
-        },0, 1,TimeUnit.SECONDS);
+        }, 0, 1, TimeUnit.SECONDS);
 
-        service.schedule(()->{
+        service.schedule(() -> {
             System.out.println("only one");
-        },0, TimeUnit.SECONDS);
+        }, 0, TimeUnit.SECONDS);
         Thread.sleep(5000);
     }
 
+    public void test10() throws InterruptedException {
+        ExecutorService exitingExecutorService = MoreExecutors.getExitingExecutorService(new ThreadPoolExecutor(2, 2, 2, TimeUnit.SECONDS, new ArrayBlockingQueue<Runnable>(100), new ThreadPoolExecutor.AbortPolicy()));
+
+        exitingExecutorService.submit(new Runnable() {
+            @Override
+            public void run() {
+                int i = ThreadLocalRandom.current().nextInt(3, 5);
+                System.out.println(i);
+                try {
+                    TimeUnit.SECONDS.sleep(i);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        Thread.sleep(5000);
+
+        System.out.println(exitingExecutorService.isShutdown());
+    }
+
+    public void test11() throws Exception {
+        //int i = ThreadLocalRandom.current().nextInt(3, 5);
+        //System.out.println(i);
+
+        Random random = new Random();
+        random.ints(1, 10).limit(10).forEach(t -> System.out.println(t));
+        System.out.println("-------");
+        System.out.println(random.nextInt(10));
+    }
+
+    public void test12() throws InterruptedException {
+
+        ExecutorService threadPool = Executors.newFixedThreadPool(1, new ThreadFactoryBuilder().setDaemon(true).build());
+        //threadPool.
+        threadPool.submit(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    TimeUnit.SECONDS.sleep(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                System.out.println("ok");
+            }
+        });
+
+        TimeUnit.SECONDS.sleep(2);
+        System.out.println(threadPool.isTerminated());
+        System.out.println(threadPool.isShutdown());
+    }
 
     public static class Car {
 

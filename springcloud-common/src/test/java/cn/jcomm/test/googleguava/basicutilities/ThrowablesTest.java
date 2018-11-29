@@ -15,7 +15,7 @@ import java.util.List;
 public class ThrowablesTest extends TestCase{
 
 //	@Test
-//	public void test() {
+//	public void Test1() {
 //		testPropagate();
 //		testPropagateIfInstanceOf();
 //		testPropagateIfPossible();

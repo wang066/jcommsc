@@ -86,6 +86,10 @@
         <option value="$PROJECT_DIR$/springcloud-hystrix-dashboard/pom.xml" />
         <option value="$PROJECT_DIR$/springcloud-service-order-api/pom.xml" />
         <option value="$PROJECT_DIR$/springcloud-job/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud-dubbo-user-api/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud-jdbc/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud-rpc/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud-mybatis/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

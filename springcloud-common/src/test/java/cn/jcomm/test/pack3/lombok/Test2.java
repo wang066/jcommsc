@@ -42,7 +42,7 @@ class BuilderExample {
     private Set<String> occupations;
 
     public static void main(String[] args) {
-        BuilderExample test = BuilderExample.builder().age(11).name("test").build();
+        BuilderExample test = BuilderExample.builder().age(11).name("Test1").build();
     }
 }
 

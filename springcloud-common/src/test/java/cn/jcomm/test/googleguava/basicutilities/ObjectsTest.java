@@ -33,8 +33,8 @@ public class ObjectsTest {
 	}
 
 //	private void testToString() {
-//		assertEquals("Object{name=test, age=18}",
-//				Objects.toStringHelper(Object.class).add("name", "test").add("age", 18).toString());
+//		assertEquals("Object{name=Test1, age=18}",
+//				Objects.toStringHelper(Object.class).add("name", "Test1").add("age", 18).toString());
 //	}
 
 	private void testCompare() {

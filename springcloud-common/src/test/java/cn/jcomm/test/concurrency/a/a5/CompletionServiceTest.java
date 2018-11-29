@@ -3,7 +3,7 @@ package cn.jcomm.test.concurrency.a.a5;
 import java.util.concurrent.*;
 
 /**
- *CompletionService test 异步管理线程池
+ *CompletionService Test1 异步管理线程池
  */
 public class CompletionServiceTest {
     public static void main(String[] args) {

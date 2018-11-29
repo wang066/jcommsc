@@ -32,13 +32,13 @@ public class OrderingTest extends TestCase {
 	}
 
 	public void testNatural() {
-		// test int order
+		// Test1 int order
 		List<Integer> unorderedIntList = Lists.newArrayList(5, 3, 2, 4, 1);
 		List<Integer> orderedIntList = Lists.newArrayList(1, 2, 3, 4, 5);
 		Collections.sort(unorderedIntList, Ordering.natural());
 		assertTrue(orderedIntList.equals(unorderedIntList));
 
-		// test string order
+		// Test1 string order
 		List<String> unorderedStringList = Lists.newArrayList("Test", "Jerry", "Rock", "Ohaha", "Yeah");
 		List<String> orderedStringList = Lists.newArrayList("Jerry", "Ohaha", "Rock", "Test", "Yeah");
 		Collections.sort(unorderedStringList, Ordering.natural());

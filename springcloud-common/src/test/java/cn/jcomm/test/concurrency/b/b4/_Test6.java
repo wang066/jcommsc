@@ -23,7 +23,7 @@ public class _Test6 extends TestCase {
     static ThreadLocal<Integer> i = new ThreadLocal<>();
 
     /**
-     * test oom int[] 数组是存放在heap里
+     * Test1 oom int[] 数组是存放在heap里
      *
      * @param args
      */

@@ -9,12 +9,16 @@
         <module name="springcloud-common" />
         <module name="springcloud-common (1)" />
         <module name="springcloud-config-server" />
+        <module name="springcloud-dubbo-user-api" />
         <module name="springcloud-eureka-server" />
         <module name="springcloud-gateway" />
         <module name="springcloud-hystrix-dashboard" />
         <module name="springcloud-hystrix-turbine" />
         <module name="springcloud-infrastructure" />
+        <module name="springcloud-jdbc" />
         <module name="springcloud-job" />
+        <module name="springcloud-mybatis" />
+        <module name="springcloud-rpc" />
         <module name="springcloud-service-order" />
         <module name="springcloud-service-order-api" />
         <module name="springcloud-service-user" />
@@ -28,12 +32,16 @@
       <module name="springcloud-common" target="1.8" />
       <module name="springcloud-common (1)" target="1.8" />
       <module name="springcloud-config-server" target="1.8" />
+      <module name="springcloud-dubbo-user-api" target="1.8" />
       <module name="springcloud-eureka-server" target="1.8" />
       <module name="springcloud-gateway" target="1.8" />
       <module name="springcloud-hystrix-dashboard" target="1.8" />
       <module name="springcloud-hystrix-turbine" target="1.8" />
       <module name="springcloud-infrastructure" target="1.8" />
+      <module name="springcloud-jdbc" target="1.8" />
       <module name="springcloud-job" target="1.8" />
+      <module name="springcloud-mybatis" target="1.8" />
+      <module name="springcloud-rpc" target="1.8" />
       <module name="springcloud-service-order" target="1.8" />
       <module name="springcloud-service-order-api" target="1.8" />
       <module name="springcloud-service-user" target="1.8" />

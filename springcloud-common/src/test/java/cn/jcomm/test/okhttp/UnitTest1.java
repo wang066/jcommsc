@@ -1,12 +1,12 @@
 package cn.jcomm.test.okhttp;
 
+import java.io.IOException;
+
 import junit.framework.TestCase;
 import okhttp3.Headers;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-
-import java.io.IOException;
 
 /**
  * @author: jowang
@@ -25,4 +25,6 @@ public class UnitTest1 extends TestCase{
             throw new IOException("Unexpected code " + response);
         }
     }
+
+
 }

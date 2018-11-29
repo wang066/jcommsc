@@ -10,7 +10,7 @@ public class LockTest1 {
 class Sync {
 
     //锁住当前对象
-//    public synchronized void test() {
+//    public synchronized void Test1() {
 //        System.out.println("test开始..");
 //        try {
 //            Thread.sleep(1000);
@@ -21,7 +21,7 @@ class Sync {
 //    }
 
     //锁住当前对象
-//    public void test() {
+//    public void Test1() {
 //        synchronized(this){
 //            System.out.println("test开始..");
 //            try {

@@ -1,8 +1,15 @@
 package cn.jcomm.test.concurrency.b.b4;
 
-import junit.framework.TestCase;
+import java.util.concurrent.BrokenBarrierException;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.CyclicBarrier;
+import java.util.concurrent.Exchanger;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
-import java.util.concurrent.*;
+import junit.framework.TestCase;
 
 /**
  * Created by jowang on 2018/4/22 0022.
@@ -66,7 +73,7 @@ public class LockTest extends TestCase {
         t.join();
     }
 
-    public void test3() throws BrokenBarrierException, InterruptedException {
+    public void test3() throws Exception {
         CyclicBarrier cyclicBarrier = new CyclicBarrier(2, new Runnable() {
             @Override
             public void run() {
@@ -79,10 +86,12 @@ public class LockTest extends TestCase {
             public void run() {
                 System.out.println(2);
                 try {
-                    cyclicBarrier.await();
+                    cyclicBarrier.await(1,TimeUnit.DAYS);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } catch (BrokenBarrierException e) {
+                    e.printStackTrace();
+                } catch (TimeoutException e) {
                     e.printStackTrace();
                 }
                 try {
@@ -95,9 +104,10 @@ public class LockTest extends TestCase {
             }
         }).start();
 
+        TimeUnit.SECONDS.sleep(1);
         System.out.println(1);
-        cyclicBarrier.await();
-
+        cyclicBarrier.await(1,TimeUnit.DAYS);
+        System.out.println("sleep");
         Thread.sleep(1000);
 
 

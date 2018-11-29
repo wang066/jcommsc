@@ -13,7 +13,7 @@ import java.util.List;
 public class ImmutableCollectionsTest extends TestCase{
 
 //	@Test
-//	public void test() {
+//	public void Test1() {
 //		testJDKUnmodifiedList();
 //		testCreate();
 //		testAsList();

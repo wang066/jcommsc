@@ -1,4 +1,4 @@
-package cn.jcomm.test.concurrency.a.a1;//package test.thread;
+package cn.jcomm.test.concurrency.a.a1;//package Test1.thread;
 //
 //import org.apache.log4j.PropertyConfigurator;
 //import org.quartz.*;
@@ -91,7 +91,7 @@ package cn.jcomm.test.concurrency.a.a1;//package test.thread;
 //        // Trigger the job to run on the next round minute
 ////        Trigger trigger = newTrigger().withIdentity("trigger1", "group1").startAt(runTime).build();
 //        Trigger trigger = newTrigger().withIdentity("trigger1", "group1").startAt(runTime).withSchedule(SimpleScheduleBuilder.simpleSchedule().withIntervalInSeconds(1).repeatForever()).build();
-//        // Tell test.quartz to schedule the job using our trigger
+//        // Tell Test1.quartz to schedule the job using our trigger
 //        sched.scheduleJob(job, trigger);
 //        System.out.println(job.getKey() + " will run at: " + runTime);
 //

@@ -126,9 +126,13 @@ public class _ThreadTest4 extends TestCase {
         });
 
         executorService.shutdown();
-        while (!executorService.awaitTermination(1, TimeUnit.SECONDS)) {
-            System.out.println("running");
-        }
+        executorService.awaitTermination(1, TimeUnit.DAYS);
+        System.out.println(executorService.isShutdown());
+
+        //executorService.invokeAll()
+        //while (!executorService.awaitTermination(1, TimeUnit.SECONDS)) {
+        //    System.out.println("running");
+        //}
 
 
         //executorService.isShutdown()
