@@ -27,10 +27,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="jcommsc" target="1.8" />
-      <module name="LRPC" target="1.5" />
-      <module name="rpc0" target="1.7" />
       <module name="springcloud-common" target="1.8" />
-      <module name="springcloud-common (1)" target="1.8" />
       <module name="springcloud-config-server" target="1.8" />
       <module name="springcloud-dubbo-user-api" target="1.8" />
       <module name="springcloud-eureka-server" target="1.8" />
@@ -41,13 +38,11 @@
       <module name="springcloud-jdbc" target="1.8" />
       <module name="springcloud-job" target="1.8" />
       <module name="springcloud-mybatis" target="1.8" />
-      <module name="springcloud-rpc" target="1.8" />
+      <module name="springcloud-rpc" target="1.5" />
       <module name="springcloud-service-order" target="1.8" />
       <module name="springcloud-service-order-api" target="1.8" />
       <module name="springcloud-service-user" target="1.8" />
       <module name="springcloud-service-user-api" target="1.8" />
-      <module name="springcloud-static" target="1.8" />
-      <module name="wangRPC" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

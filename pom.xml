@@ -22,8 +22,6 @@
         <module>springcloud-service-order-api</module>
         <module>springcloud-service-user</module>
         <module>springcloud-service-user-api</module>
-        <module>wangRPC</module>
-        <module>rpc0</module>
     </modules>
     <!-- aliyun maven repo -->
     <repositories>
@@ -167,6 +165,8 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <version>1.16.22</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- 使用Swagger2构建强大的RESTful API文档 -->
