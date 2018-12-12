@@ -1,5 +1,6 @@
 package cn.jcomm.test.concurrency.b.b4;
 
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -11,7 +12,7 @@ public class CondtionTest {
 
     static int count = 0;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Lock lock = new ReentrantLock();
         Condition conditionA = lock.newCondition();
         Condition conditionB = lock.newCondition();
@@ -71,6 +72,8 @@ public class CondtionTest {
 
         t1.start();
         t2.start();
+
+        TimeUnit.SECONDS.sleep(10);//要注意刚开始的锁可能就被线程2拿着
     }
 
 }

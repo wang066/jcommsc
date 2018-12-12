@@ -10,7 +10,6 @@ import lombok.Data;
 @Data
 public class Request {
     private String url;
-
     public Caller caller(){
         return null;
     }

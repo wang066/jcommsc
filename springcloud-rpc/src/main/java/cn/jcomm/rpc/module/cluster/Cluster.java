@@ -6,4 +6,5 @@ package cn.jcomm.rpc.module.cluster;
  * @description:
  */
 public class Cluster {
+
 }
