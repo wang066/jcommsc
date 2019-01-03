@@ -8,8 +8,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.EnableAsync;
 
-import java.util.Arrays;
-
 @SpringBootApplication
 //@EnableScheduling 自动有的
 @EnableAsync
@@ -23,14 +21,13 @@ public class SpringcloudServiceUserApplication {
 
     @Bean
     public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
-
-
-        System.out.println("CommandLineRunner init");
-        String[] beanNames = ctx.getBeanDefinitionNames();
-        Arrays.sort(beanNames);
-        for (String beanName : beanNames) {
-            System.out.println(beanName);
-        }
         return null;
+        //System.out.println("CommandLineRunner init");
+        //String[] beanNames = ctx.getBeanDefinitionNames();
+        //Arrays.sort(beanNames);
+        //for (String beanName : beanNames) {
+        //    System.out.println(beanName);
+        //}
+        //return null;
     }
 }

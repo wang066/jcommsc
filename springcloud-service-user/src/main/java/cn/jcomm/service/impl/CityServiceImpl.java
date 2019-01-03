@@ -1,7 +1,8 @@
-package cn.jcomm.service;
+package cn.jcomm.service.impl;
 
 import cn.jcomm.dao.CityRepository;
 import cn.jcomm.model.DO.City;
+import cn.jcomm.service.CityService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

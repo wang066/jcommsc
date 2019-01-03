@@ -1,12 +1,13 @@
-package cn.jcomm.service;
+package cn.jcomm.service.impl;
+
+import java.util.List;
 
 import cn.jcomm.dao.UserRepository;
 import cn.jcomm.model.DO.User;
 import cn.jcomm.model.UserStatus;
+import cn.jcomm.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 /**
  * Created by jowang on 2017/8/1 0001.

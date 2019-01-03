@@ -4,15 +4,23 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.PriorityQueue;
 import java.util.Random;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.Callable;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.DelayQueue;
+import java.util.concurrent.Delayed;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.FutureTask;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -21,7 +29,11 @@ import com.alibaba.fastjson.JSON;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.ListenableFutureTask;
+import com.google.common.util.concurrent.MoreExecutors;
 import junit.framework.TestCase;
+import org.apache.commons.lang3.StringUtils;
+import org.joda.time.DateTime;
+import org.joda.time.Seconds;
 
 /**
  * @author: jowang
@@ -163,11 +175,11 @@ public class Test3 extends TestCase {
     }
 
 
-
     public void test11() throws InterruptedException, ExecutionException {
 
-         ExecutorService executor = Executors.newFixedThreadPool(3, new ThreadFactory() {
+        ExecutorService executor = Executors.newFixedThreadPool(3, new ThreadFactory() {
             int count = 1;
+
             @Override
             public Thread newThread(Runnable runnable) {
                 return new Thread(runnable, "custom-executor-" + count++);
@@ -186,8 +198,8 @@ public class Test3 extends TestCase {
     public void test12() throws InterruptedException {
         String original = "Message";
         StringBuilder result = new StringBuilder();
-        CompletableFuture.completedFuture(original).thenApply(String::toUpperCase).thenAcceptBoth(
-                CompletableFuture.completedFuture(original).thenApply(String::toLowerCase),
+        CompletableFuture.completedFuture(original).thenApply(String:: toUpperCase).thenAcceptBoth(
+                CompletableFuture.completedFuture(original).thenApply(String:: toLowerCase),
                 (s1, s2) -> result.append(s1 + s2));
         System.out.println(result.toString());
         assertEquals("MESSAGEmessage", result.toString());
@@ -197,7 +209,7 @@ public class Test3 extends TestCase {
         Random rand = new Random();
         CompletableFuture<Integer> future1 = CompletableFuture.supplyAsync(() -> {
             try {
-                Thread.sleep( rand.nextInt(1000));
+                Thread.sleep(rand.nextInt(1000));
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -205,13 +217,13 @@ public class Test3 extends TestCase {
         });
         CompletableFuture<String> future2 = CompletableFuture.supplyAsync(() -> {
             try {
-                Thread.sleep( rand.nextInt(1000));
+                Thread.sleep(rand.nextInt(1000));
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             return "abc";
         });
-        CompletableFuture<Void> f =  CompletableFuture.allOf(future1,future2);
+        CompletableFuture<Void> f = CompletableFuture.allOf(future1, future2);
         //CompletableFuture<Object> f =  CompletableFuture.anyOf(future1,future2);
         System.out.println(f.get());
     }
@@ -226,7 +238,7 @@ public class Test3 extends TestCase {
         CompletableFuture<Integer> future = CompletableFuture.supplyAsync(() -> {
             return 100;
         });
-        CompletableFuture<Void> f =  future.thenAcceptBoth(CompletableFuture.completedFuture(10), (x, y) -> System.out.println(x * y));
+        CompletableFuture<Void> f = future.thenAcceptBoth(CompletableFuture.completedFuture(10), (x, y) -> System.out.println(x * y));
         System.out.println(f.get());
     }
 
@@ -234,10 +246,12 @@ public class Test3 extends TestCase {
         final CompletableFuture<Integer> f = new CompletableFuture<>();
         class Client extends Thread {
             CompletableFuture<Integer> f;
+
             Client(String threadName, CompletableFuture<Integer> f) {
                 super(threadName);
                 this.f = f;
             }
+
             @Override
             public void run() {
                 try {
@@ -260,15 +274,151 @@ public class Test3 extends TestCase {
 
     /**
      * 异常处理的区别
+     *
      * @throws ExecutionException
      * @throws InterruptedException
      */
     public void test16() throws ExecutionException, InterruptedException {
         CompletableFuture<Integer> future = CompletableFuture.supplyAsync(() -> {
-            int i = 1/0;
+            int i = 1 / 0;
             return 100;
         });
         //future.join();
         future.get();
+    }
+
+    public void test17() {
+        ArrayList<String> strings = new ArrayList<>();
+        //strings.add("{123:1231}");
+        //strings.add("{123:1231}");
+        //strings.add("{123:1231}");
+        System.out.println(JSON.toJSONString(strings));
+        System.out.println(String.format("[%s]", StringUtils.join(strings, ",")));
+    }
+
+    public void test18() throws ExecutionException, InterruptedException {
+        FutureTask<String> f = new FutureTask<String>(new Callable<String>() {
+            @Override
+            public String call() throws Exception {
+                return "a";
+            }
+        });
+
+        f.run();
+        System.out.println(f.get());
+    }
+
+    public void test19() {
+        //ScheduledExecutorService scheduledExecutorService=Executors.unconfigurableScheduledExecutorService()
+        //ScheduledExecutorService scheduledExecutorService=Executors.newScheduledThreadPool(1);
+        ScheduledThreadPoolExecutor scheduledThreadPoolExecutor = new ScheduledThreadPoolExecutor(1);
+    }
+
+    public void test20() {
+        Student s1 = new Student();
+        s1.setGrade(100);
+        Student s2 = new Student();
+        s2.setGrade(10);
+
+        s1.compareTo(s2);
+    }
+
+    public void test21() {
+        System.out.println(DateTime.now().toDate().getTime() - System.currentTimeMillis());
+    }
+
+    class Student implements Comparable<Student> {
+
+        private int grade;
+
+        public int getGrade() {
+            return grade;
+        }
+
+        public void setGrade(int grade) {
+            this.grade = grade;
+        }
+
+        @Override
+        public int compareTo(Student o) {
+            return this.grade - o.grade;
+        }
+    }
+
+    public void test22() throws InterruptedException {
+        //System.out.println(TimeUnit.MICROSECONDS.toNanos(1));
+
+        ScheduledExecutorService scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
+        DateTime dateTime = DateTime.now().plusSeconds(1);
+        int seconds = Seconds.secondsBetween(DateTime.now(), dateTime).getSeconds();
+        System.out.println(seconds);
+        int seconds2 = Seconds.secondsBetween(DateTime.now(), dateTime.plusDays(1)).getSeconds();
+        System.out.println(seconds2);
+        scheduledExecutorService.schedule(()->{
+            System.out.println("ok");
+            System.out.println(DateTime.now());
+        },seconds ,TimeUnit.SECONDS);
+
+        TimeUnit.SECONDS.sleep(5);
+    }
+
+    public void test23() throws InterruptedException {
+        DelayQueue<Delayed> queue=new DelayQueue<>();
+        queue.put(new Delayed() {
+            @Override
+            public long getDelay(TimeUnit unit) {
+                return 0;
+            }
+
+            @Override
+            public int compareTo(Delayed o) {
+                return 0;
+            }
+        });
+    }
+
+    private static void printInfo(int num) {
+        System.out.println(Integer.toBinaryString(num));
+    }
+
+    public void test24() {
+
+        int number = 10;
+        //原始数二进制
+        printInfo(number);
+        number = number << 1;
+        //左移一位
+        printInfo(number);
+        number = number >>> 1;
+        //右移一位
+        printInfo(number);
+    }
+
+    public void test25() {
+        PriorityQueue<String> pq=
+                new PriorityQueue<String>(5, (a, b) -> a.length() - b.length());
+        // or pq = new PriorityQueue<String>(5, Comparator.comparing(String::length));
+        pq.add("Apple");
+        pq.add("PineApple");
+        pq.add("Custard Apple");
+        while (pq.size() != 0)
+        {
+            System.out.println(pq.remove());
+        }
+
+    }
+
+    public void test26() {
+        ExecutorService exitingExecutorService = MoreExecutors.getExitingExecutorService(new ThreadPoolExecutor(1, 1, 1, TimeUnit.SECONDS, new ArrayBlockingQueue<>(100)));
+    }
+
+    public void test27() {
+        int i = ThreadLocalRandom.current().nextInt(10000);
+        System.out.println(i);
+        try {
+            TimeUnit.MILLISECONDS.sleep(i);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

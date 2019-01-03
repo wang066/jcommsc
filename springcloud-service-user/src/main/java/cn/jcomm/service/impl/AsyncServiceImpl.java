@@ -1,11 +1,12 @@
-package cn.jcomm.service;
-
-import org.springframework.scheduling.annotation.Async;
-import org.springframework.scheduling.annotation.AsyncResult;
-import org.springframework.stereotype.Service;
+package cn.jcomm.service.impl;
 
 import java.util.Random;
 import java.util.concurrent.Future;
+
+import cn.jcomm.service.AsyncService;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.scheduling.annotation.AsyncResult;
+import org.springframework.stereotype.Service;
 
 /**
  * Created by jowang on 2017/7/13 0013.

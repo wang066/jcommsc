@@ -30,6 +30,7 @@
       <module name="springcloud-common" target="1.8" />
       <module name="springcloud-config-server" target="1.8" />
       <module name="springcloud-dubbo-user-api" target="1.8" />
+      <module name="springcloud-es" target="1.5" />
       <module name="springcloud-eureka-server" target="1.8" />
       <module name="springcloud-gateway" target="1.8" />
       <module name="springcloud-hystrix-dashboard" target="1.8" />
