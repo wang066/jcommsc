@@ -126,7 +126,8 @@ public class LockTest extends TestCase {
                 String A= "A";
                 try {
                     Thread.sleep(1000);
-                    exchanger.exchange(A);
+                    String exchange = exchanger.exchange(A);
+                    System.out.println("1"+exchange);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -153,7 +154,6 @@ public class LockTest extends TestCase {
         });
 
         executorService.awaitTermination(1,TimeUnit.SECONDS);
-
         executorService.shutdown();
     }
 }

@@ -1,6 +1,9 @@
 package cn.jcomm.test.concurrency.c;
 
 import java.io.IOException;
+import java.time.Duration;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -22,10 +25,12 @@ import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
+import java.util.function.UnaryOperator;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import com.alibaba.fastjson.JSON;
+import com.google.common.collect.Lists;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.ListenableFutureTask;
@@ -420,5 +425,86 @@ public class Test3 extends TestCase {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    public void test28() {
+        int i = 1 << 3;
+        ArrayList<String> strings = Lists.newArrayList("a", "b");
+        System.out.println(JSON.toJSONString(strings.stream().filter(t -> t.equals("a")).collect(Collectors.toList())));
+    }
+
+    class Student2  {
+
+        private int grade;
+
+        public int getGrade() {
+            return grade;
+        }
+
+        public void setGrade(int grade) {
+            this.grade = grade;
+        }
+    }
+
+    public void test29() {
+
+        //可以插入，但是效率低，没有用comapre
+        //HashMap<Student2,Integer> map=new HashMap<>();
+        //map.put(new Student2(),1);
+
+        System.out.println(Integer.valueOf(1).equals(null));
+        System.out.println(5%2);
+    }
+
+    public void test30() {
+        Integer i=null;
+        System.out.println(i==1);
+    }
+
+    public void test31() {
+        ArrayList<String> strings = Lists.newArrayList("1", "2");
+        List<String> collect = strings.stream().filter(t -> t.equals("1")).collect(Collectors.toList());
+        System.out.println(JSON.toJSONString(collect));
+    }
+
+    public void test32() {
+        ThreadLocal t1=new ThreadLocal();
+        t1.set(1);
+
+        ThreadLocal t2=new ThreadLocal();
+        t2.set(2);
+
+        System.out.println(t1.get()+""+t2.get());
+    }
+
+    volatile  int i=1;
+    public void test33() {
+        int i2=i;
+        i2++;
+        System.out.println(i2==i);
+    }
+
+    public void test34() {
+        Integer i=1;
+        System.out.println(i.equals(null));
+    }
+
+    public void test35() {
+        ArrayList<String> strings = Lists.newArrayList("1", "2");
+        System.out.println(JSON.toJSONString(strings.subList(0, 0)));
+    }
+
+    public void test36() {
+        System.out.println(Duration.between( LocalDateTime.now(),LocalDate.now().plusDays(1).atStartOfDay()).toHours());
+        //51115903
+        //50400
+    }
+
+    public void test37() {
+        UnaryOperator<Integer> dda = x -> x + 1;
+        System.out.println(dda.apply(10));// 11
+        UnaryOperator<String> ddb = x -> x + 1;
+        System.out.println(ddb.apply("aa"));// aa1
+
     }
 }
