@@ -6,7 +6,9 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Random;
 import java.util.concurrent.ArrayBlockingQueue;
@@ -507,4 +509,25 @@ public class Test3 extends TestCase {
         System.out.println(ddb.apply("aa"));// aa1
 
     }
+
+    public void test38() {
+        Map map=new HashMap();
+        String s="kpname=西峡县华联加油站&kpcode=91411323397444696W&kpaddr=西峡县莲花北路气象站路口&kptel=0377-69698228&kpbank=河南西峡农村商业银行股份有限公司&kpaccount=32585178******&kptelPerson=&merchantTaxnumMake=339901999999510&invoicetype=0&identityCard=&roomNum=";
+
+        String[] split = s.split("&");
+        for (String s1 : split) {
+            String[] split1 = s1.split("=");
+            if(split1.length>1){
+                map.put(split1[0],split1[1]);
+            }
+        }
+
+        System.out.println(JSON.toJSONString(map));
+    }
+
+    public void test39() {
+        System.out.println(JSON.toJSONString(null));
+    }
+
+
 }
