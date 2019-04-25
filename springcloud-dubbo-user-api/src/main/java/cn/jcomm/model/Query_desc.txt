@@ -1,0 +1,2 @@
+query object
+数据查询对象

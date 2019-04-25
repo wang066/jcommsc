@@ -30,6 +30,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.UnaryOperator;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 import com.alibaba.fastjson.JSON;
 import com.google.common.collect.Lists;
@@ -48,6 +49,12 @@ import org.joda.time.Seconds;
  * @description:
  */
 public class Test3 extends TestCase {
+
+    volatile int i = 1;
+
+    private static void printInfo(int num) {
+        System.out.println(Integer.toBinaryString(num));
+    }
 
     public void test1() {
         //var consumer=()->{};
@@ -113,7 +120,6 @@ public class Test3 extends TestCase {
         //System.out.println("all finsh");
     }
 
-
     public void test3() throws Exception {
         BlockingQueue queue = new ArrayBlockingQueue(10);
         //BlockingQueue queue1=new RedissonBlockingDeque()
@@ -151,7 +157,7 @@ public class Test3 extends TestCase {
         List<Integer> dist = new ArrayList<>(src.size());
         Collections.addAll(dist, new Integer[src.size()]);
         Collections.copy(dist, src);
-        dist.forEach(System.out:: println);
+        dist.forEach(System.out :: println);
     }
 
     public void test7() {
@@ -159,7 +165,6 @@ public class Test3 extends TestCase {
         System.out.println(cf.isDone());
         System.out.println(cf.getNow(null));
     }
-
 
     public void test8() throws InterruptedException {
         CompletableFuture<Void> cf = CompletableFuture.runAsync(() -> {
@@ -180,7 +185,6 @@ public class Test3 extends TestCase {
         System.out.println("aaaa");
         //assertEquals("MESSAGE", cf.getNow(null));
     }
-
 
     public void test11() throws InterruptedException, ExecutionException {
 
@@ -205,8 +209,8 @@ public class Test3 extends TestCase {
     public void test12() throws InterruptedException {
         String original = "Message";
         StringBuilder result = new StringBuilder();
-        CompletableFuture.completedFuture(original).thenApply(String:: toUpperCase).thenAcceptBoth(
-                CompletableFuture.completedFuture(original).thenApply(String:: toLowerCase),
+        CompletableFuture.completedFuture(original).thenApply(String :: toUpperCase).thenAcceptBoth(
+                CompletableFuture.completedFuture(original).thenApply(String :: toLowerCase),
                 (s1, s2) -> result.append(s1 + s2));
         System.out.println(result.toString());
         assertEquals("MESSAGEmessage", result.toString());
@@ -334,24 +338,6 @@ public class Test3 extends TestCase {
         System.out.println(DateTime.now().toDate().getTime() - System.currentTimeMillis());
     }
 
-    class Student implements Comparable<Student> {
-
-        private int grade;
-
-        public int getGrade() {
-            return grade;
-        }
-
-        public void setGrade(int grade) {
-            this.grade = grade;
-        }
-
-        @Override
-        public int compareTo(Student o) {
-            return this.grade - o.grade;
-        }
-    }
-
     public void test22() throws InterruptedException {
         //System.out.println(TimeUnit.MICROSECONDS.toNanos(1));
 
@@ -361,16 +347,16 @@ public class Test3 extends TestCase {
         System.out.println(seconds);
         int seconds2 = Seconds.secondsBetween(DateTime.now(), dateTime.plusDays(1)).getSeconds();
         System.out.println(seconds2);
-        scheduledExecutorService.schedule(()->{
+        scheduledExecutorService.schedule(() -> {
             System.out.println("ok");
             System.out.println(DateTime.now());
-        },seconds ,TimeUnit.SECONDS);
+        }, seconds, TimeUnit.SECONDS);
 
         TimeUnit.SECONDS.sleep(5);
     }
 
     public void test23() throws InterruptedException {
-        DelayQueue<Delayed> queue=new DelayQueue<>();
+        DelayQueue<Delayed> queue = new DelayQueue<>();
         queue.put(new Delayed() {
             @Override
             public long getDelay(TimeUnit unit) {
@@ -382,10 +368,6 @@ public class Test3 extends TestCase {
                 return 0;
             }
         });
-    }
-
-    private static void printInfo(int num) {
-        System.out.println(Integer.toBinaryString(num));
     }
 
     public void test24() {
@@ -402,14 +384,13 @@ public class Test3 extends TestCase {
     }
 
     public void test25() {
-        PriorityQueue<String> pq=
+        PriorityQueue<String> pq =
                 new PriorityQueue<String>(5, (a, b) -> a.length() - b.length());
         // or pq = new PriorityQueue<String>(5, Comparator.comparing(String::length));
         pq.add("Apple");
         pq.add("PineApple");
         pq.add("Custard Apple");
-        while (pq.size() != 0)
-        {
+        while (pq.size() != 0) {
             System.out.println(pq.remove());
         }
 
@@ -435,19 +416,6 @@ public class Test3 extends TestCase {
         System.out.println(JSON.toJSONString(strings.stream().filter(t -> t.equals("a")).collect(Collectors.toList())));
     }
 
-    class Student2  {
-
-        private int grade;
-
-        public int getGrade() {
-            return grade;
-        }
-
-        public void setGrade(int grade) {
-            this.grade = grade;
-        }
-    }
-
     public void test29() {
 
         //可以插入，但是效率低，没有用comapre
@@ -455,12 +423,12 @@ public class Test3 extends TestCase {
         //map.put(new Student2(),1);
 
         System.out.println(Integer.valueOf(1).equals(null));
-        System.out.println(5%2);
+        System.out.println(5 % 2);
     }
 
     public void test30() {
-        Integer i=null;
-        System.out.println(i==1);
+        Integer i = null;
+        System.out.println(i == 1);
     }
 
     public void test31() {
@@ -470,24 +438,23 @@ public class Test3 extends TestCase {
     }
 
     public void test32() {
-        ThreadLocal t1=new ThreadLocal();
+        ThreadLocal t1 = new ThreadLocal();
         t1.set(1);
 
-        ThreadLocal t2=new ThreadLocal();
+        ThreadLocal t2 = new ThreadLocal();
         t2.set(2);
 
-        System.out.println(t1.get()+""+t2.get());
+        System.out.println(t1.get() + "" + t2.get());
     }
 
-    volatile  int i=1;
     public void test33() {
-        int i2=i;
+        int i2 = i;
         i2++;
-        System.out.println(i2==i);
+        System.out.println(i2 == i);
     }
 
     public void test34() {
-        Integer i=1;
+        Integer i = 1;
         System.out.println(i.equals(null));
     }
 
@@ -497,7 +464,7 @@ public class Test3 extends TestCase {
     }
 
     public void test36() {
-        System.out.println(Duration.between( LocalDateTime.now(),LocalDate.now().plusDays(1).atStartOfDay()).toHours());
+        System.out.println(Duration.between(LocalDateTime.now(), LocalDate.now().plusDays(1).atStartOfDay()).toHours());
         //51115903
         //50400
     }
@@ -511,14 +478,14 @@ public class Test3 extends TestCase {
     }
 
     public void test38() {
-        Map map=new HashMap();
-        String s="kpname=西峡县华联加油站&kpcode=91411323397444696W&kpaddr=西峡县莲花北路气象站路口&kptel=0377-69698228&kpbank=河南西峡农村商业银行股份有限公司&kpaccount=32585178******&kptelPerson=&merchantTaxnumMake=339901999999510&invoicetype=0&identityCard=&roomNum=";
+        Map map = new HashMap();
+        String s = "kpname=西峡县华联加油站&kpcode=91411323397444696W&kpaddr=西峡县莲花北路气象站路口&kptel=0377-69698228&kpbank=河南西峡农村商业银行股份有限公司&kpaccount=32585178******&kptelPerson=&merchantTaxnumMake=339901999999510&invoicetype=0&identityCard=&roomNum=";
 
         String[] split = s.split("&");
         for (String s1 : split) {
             String[] split1 = s1.split("=");
-            if(split1.length>1){
-                map.put(split1[0],split1[1]);
+            if (split1.length > 1) {
+                map.put(split1[0], split1[1]);
             }
         }
 
@@ -529,5 +496,52 @@ public class Test3 extends TestCase {
         System.out.println(JSON.toJSONString(null));
     }
 
+    public void test40() {
+        // Create a String with no repeated keys
+        Stream<String[]> str = Stream
+                .of(new String[][]{{"GFG", "GeeksForGeeks"},
+                        {"g", "geeks"},
+                        {"G", "Geeks"}});
+
+        // Convert the String to Map
+        // using toMap() method
+        Map<String, String>
+                map = str.collect(
+                Collectors.toMap(p -> p[0], p -> p[1]));
+
+        // Print the returned Map
+        System.out.println("Map:" + map);
+    }
+
+    class Student implements Comparable<Student> {
+
+        private int grade;
+
+        public int getGrade() {
+            return grade;
+        }
+
+        public void setGrade(int grade) {
+            this.grade = grade;
+        }
+
+        @Override
+        public int compareTo(Student o) {
+            return this.grade - o.grade;
+        }
+    }
+
+    class Student2 {
+
+        private int grade;
+
+        public int getGrade() {
+            return grade;
+        }
+
+        public void setGrade(int grade) {
+            this.grade = grade;
+        }
+    }
 
 }
