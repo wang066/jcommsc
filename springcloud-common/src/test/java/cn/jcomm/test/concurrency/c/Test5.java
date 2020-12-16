@@ -8,5 +8,7 @@ import junit.framework.TestCase;
  * @description:
  */
 public class Test5 extends TestCase {
-
+    // public void test() {
+    //     System.out.println(null!=1);
+    // }
 }
