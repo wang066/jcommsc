@@ -74,18 +74,6 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/springcloud-common/pom.xml" />
-        <option value="$PROJECT_DIR$/springcloud-service-user/pom.xml" />
-        <option value="$PROJECT_DIR$/springcloud-service-user-api/pom.xml" />
-        <option value="$PROJECT_DIR$/springcloud-gateway/pom.xml" />
-        <option value="$PROJECT_DIR$/springcloud-config-server/pom.xml" />
-        <option value="$PROJECT_DIR$/springcloud-eureka-server/pom.xml" />
-        <option value="$PROJECT_DIR$/springcloud-service-order/pom.xml" />
-        <option value="$PROJECT_DIR$/springcloud-infrastructure/pom.xml" />
-        <option value="$PROJECT_DIR$/springcloud-hystrix-turbine/pom.xml" />
-        <option value="$PROJECT_DIR$/springcloud-hystrix-dashboard/pom.xml" />
-        <option value="$PROJECT_DIR$/springcloud-service-order-api/pom.xml" />
-        <option value="$PROJECT_DIR$/springcloud-job/pom.xml" />
         <option value="$PROJECT_DIR$/springcloud-dubbo-user-api/pom.xml" />
         <option value="$PROJECT_DIR$/springcloud-jdbc/pom.xml" />
         <option value="$PROJECT_DIR$/springcloud-rpc/pom.xml" />
@@ -96,11 +84,19 @@
       <set>
         <option value="$PROJECT_DIR$/LRPC/pom.xml" />
         <option value="$PROJECT_DIR$/rpc0/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud-config-server/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud-eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud-hystrix-dashboard/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud-hystrix-turbine/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud-infrastructure/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud-service-order-api/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud-service-order/pom.xml" />
         <option value="$PROJECT_DIR$/wangRPC/pom.xml" />
       </set>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

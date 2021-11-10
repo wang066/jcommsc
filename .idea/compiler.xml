@@ -7,27 +7,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springcloud-infrastructure" />
-        <module name="springcloud-gateway" />
-        <module name="springcloud-service-order" />
-        <module name="springcloud-service-user-api" />
-        <module name="springcloud-eureka-server" />
+        <module name="springcloud-jdbc" />
         <module name="springcloud-rpc" />
         <module name="springcloud-common (1)" />
-        <module name="springcloud-service-user" />
-        <module name="springcloud-config-server" />
-        <module name="springcloud-hystrix-turbine" />
-        <module name="springcloud-jdbc" />
-        <module name="springcloud-hystrix-dashboard" />
-        <module name="springcloud-common" />
         <module name="springcloud-mybatis" />
+        <module name="springcloud-common" />
         <module name="springcloud-dubbo-user-api" />
-        <module name="springcloud-job" />
-        <module name="springcloud-service-order-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="jcommsc" target="1.8" />
+      <module name="springboot2" target="1.8" />
       <module name="springcloud-common" target="1.8" />
       <module name="springcloud-config-server" target="1.8" />
       <module name="springcloud-dubbo-user-api" target="1.8" />
@@ -46,5 +36,11 @@
       <module name="springcloud-service-user" target="1.8" />
       <module name="springcloud-service-user-api" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="springboot2" options="-parameters" />
+      <module name="springcloud-job" options="-parameters" />
+    </option>
   </component>
 </project>

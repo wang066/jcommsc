@@ -63,7 +63,7 @@ public class Test3 extends TestCase {
         //lombok.val i=0;
         //i++;
 
-        lombok.var i = 0;
+        int i = 0;
         i++;
         System.out.println(i);
 

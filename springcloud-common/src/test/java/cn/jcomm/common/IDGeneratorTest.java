@@ -5,12 +5,11 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
 
+import com.google.common.util.concurrent.Futures;
 import junit.framework.TestCase;
 import org.joda.time.DateTime;
 import org.springframework.util.CollectionUtils;
@@ -66,13 +65,24 @@ public class IDGeneratorTest extends TestCase {
 
         executorService.shutdown();
     }
-
+    private static final AtomicInteger SERIAL = new AtomicInteger(Integer.MAX_VALUE);
     public void test3() {
-        long time = Duration.between(LocalDate.now().plusDays(1).atStartOfDay(), LocalDateTime.now()).toMillis();
-        System.out.println(LocalDateTime.now());
-        System.out.println(LocalDate.now().plusDays(1).atStartOfDay());
-        System.out.println(Duration.between(LocalDateTime.now(), LocalDate.now().plusDays(1).atStartOfDay()).toMillis());
+        // long time = Duration.between(LocalDate.now().plusDays(1).atStartOfDay(), LocalDateTime.now()).toMillis();
+        // System.out.println(LocalDateTime.now());
+        // System.out.println(LocalDate.now().plusDays(1).atStartOfDay());
+        // System.out.println(Duration.between(LocalDateTime.now(), LocalDate.now().plusDays(1).atStartOfDay()).toMillis());
 //        System.out.println(time);
+
+        // ExecutorService executorService = new ThreadPoolExecutor(2, 2, 1, TimeUnit.DAYS, new ArrayBlockingQueue<Runnable>(1000));
+        System.out.println(SERIAL.get());
+        LocalDateTime now = LocalDateTime.now();
+        LocalDateTime now1 = now.plusSeconds(1);
+       while ( LocalDateTime.now().isBefore(now1)){
+           SERIAL.incrementAndGet();
+       }
+
+
+        System.out.println(SERIAL.get());
     }
 
     public void test2() {

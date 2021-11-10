@@ -1,5 +1,8 @@
 package cn.jcomm.test.concurrency.a.a3;
 
+import cn.jcomm.common.redis.RedissonUtils;
+import org.redisson.api.RBloomFilter;
+
 /**
  * 线程让步 cpu 时间让步
  */
@@ -31,8 +34,15 @@ public class YieldTest implements  Runnable{
     }
 
     public static void main(String[] args) {
-        new YieldTest("Thread 1");
-        new YieldTest("Thread 2");
-        new YieldTest("Thread 3");
+        // new YieldTest("Thread 1");
+        // new YieldTest("Thread 2");
+        // new YieldTest("Thread 3");
+        // RedissonUtils.getRedisson().getBloomFilter().
+        // RBloomFilter
+
+        // 高级版本才有
+        // RClusteredBloomFilter
+
+        System.out.println(Math.abs(Integer.MIN_VALUE));
     }
 }

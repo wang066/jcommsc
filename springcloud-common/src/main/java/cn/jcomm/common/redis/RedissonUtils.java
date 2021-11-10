@@ -11,7 +11,7 @@ import org.redisson.config.Config;
  * @date: 2018/4/8 0008 16:17
  * @description:
  */
-@Slf4j
+// @Slf4j
 public abstract class RedissonUtils {
     private RedissonUtils(){
 
@@ -27,7 +27,7 @@ public abstract class RedissonUtils {
         Config config=new Config();
         config.useSingleServer().setAddress(ip+":"+port);
         RedissonClient redisson= Redisson.create(config);
-        log.debug("成功连接Redis Server"+"\t"+"连接"+ip+":"+port+"服务器");
+        // log.debug("成功连接Redis Server"+"\t"+"连接"+ip+":"+port+"服务器");
         return redisson;
     }
 
@@ -37,7 +37,7 @@ public abstract class RedissonUtils {
      */
     public static void closeRedisson(RedissonClient client){
         client.shutdown();
-        log.debug("成功关闭Redis Client连接");
+        // log.debug("成功关闭Redis Client连接");
     }
 
     /**
