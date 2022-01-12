@@ -78,6 +78,7 @@
         <option value="$PROJECT_DIR$/springcloud-jdbc/pom.xml" />
         <option value="$PROJECT_DIR$/springcloud-rpc/pom.xml" />
         <option value="$PROJECT_DIR$/springcloud-mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot2/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
@@ -92,6 +93,8 @@
         <option value="$PROJECT_DIR$/springcloud-infrastructure/pom.xml" />
         <option value="$PROJECT_DIR$/springcloud-service-order-api/pom.xml" />
         <option value="$PROJECT_DIR$/springcloud-service-order/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud-service-user-api/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud-service-user/pom.xml" />
         <option value="$PROJECT_DIR$/wangRPC/pom.xml" />
       </set>
     </option>

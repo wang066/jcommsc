@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/jcommsc.iml" filepath="$PROJECT_DIR$/jcommsc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot2/springboot2.iml" filepath="$PROJECT_DIR$/springboot2/springboot2.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud-common/springcloud-common.iml" filepath="$PROJECT_DIR$/springcloud-common/springcloud-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud-dubbo-user-api/springcloud-dubbo-user-api.iml" filepath="$PROJECT_DIR$/springcloud-dubbo-user-api/springcloud-dubbo-user-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud-jdbc/springcloud-jdbc.iml" filepath="$PROJECT_DIR$/springcloud-jdbc/springcloud-jdbc.iml" />

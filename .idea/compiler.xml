@@ -13,6 +13,7 @@
         <module name="springcloud-mybatis" />
         <module name="springcloud-common" />
         <module name="springcloud-dubbo-user-api" />
+        <module name="springboot2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
