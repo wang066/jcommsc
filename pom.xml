@@ -11,17 +11,17 @@
 
     <modules>
         <module>springcloud-common</module>
-        <module>springcloud-config-server</module>
-        <module>springcloud-eureka-server</module>
-        <module>springcloud-gateway</module>
-        <module>springcloud-hystrix-dashboard</module>
-        <module>springcloud-hystrix-turbine</module>
-        <module>springcloud-infrastructure</module>
-        <module>springcloud-job</module>
-        <module>springcloud-service-order</module>
-        <module>springcloud-service-order-api</module>
-        <module>springcloud-service-user</module>
-        <module>springcloud-service-user-api</module>
+<!--        <module>springcloud-config-server</module>-->
+<!--        <module>springcloud-eureka-server</module>-->
+<!--        <module>springcloud-gateway</module>-->
+<!--        <module>springcloud-hystrix-dashboard</module>-->
+<!--        <module>springcloud-hystrix-turbine</module>-->
+<!--        <module>springcloud-infrastructure</module>-->
+<!--        <module>springcloud-job</module>-->
+<!--        <module>springcloud-service-order</module>-->
+<!--        <module>springcloud-service-order-api</module>-->
+<!--        <module>springcloud-service-user</module>-->
+<!--        <module>springcloud-service-user-api</module>-->
     </modules>
     <!-- aliyun maven repo -->
     <repositories>
