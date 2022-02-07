@@ -1,7 +1,4 @@
-package cn.jcomm.leetcode;
-
-import java.util.List;
-import java.util.Stack;
+package com.example.springboot_leetcode.leetcode;
 
 public class 翻转链表 {
 

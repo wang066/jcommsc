@@ -43,7 +43,7 @@ public class Pipeline2 {
         }
 
         public Integer getAge() {
-            return (Integer) kv.get("name");
+            return (Integer) kv.get("age");
         }
     }
 

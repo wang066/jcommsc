@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/jcommsc.iml" filepath="$PROJECT_DIR$/jcommsc.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot2/springboot2.iml" filepath="$PROJECT_DIR$/springboot2/springboot2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_leetcode/springboot_leetcode.iml" filepath="$PROJECT_DIR$/springboot_leetcode/springboot_leetcode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_mq/springboot_mq.iml" filepath="$PROJECT_DIR$/springboot_mq/springboot_mq.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud-common/springcloud-common.iml" filepath="$PROJECT_DIR$/springcloud-common/springcloud-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud-dubbo-user-api/springcloud-dubbo-user-api.iml" filepath="$PROJECT_DIR$/springcloud-dubbo-user-api/springcloud-dubbo-user-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud-jdbc/springcloud-jdbc.iml" filepath="$PROJECT_DIR$/springcloud-jdbc/springcloud-jdbc.iml" />

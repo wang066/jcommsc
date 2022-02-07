@@ -1,10 +1,6 @@
-package cn.jcomm.leetcode;
+package com.example.springboot_leetcode.leetcode;
 
 import org.apache.commons.collections.map.LinkedMap;
-
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
 
 public class 最长回文子串 {
 

@@ -1,4 +1,4 @@
-package cn.jcomm.leetcode;
+package com.example.springboot_leetcode.leetcode;
 
 public class 汉明距离 {
 
