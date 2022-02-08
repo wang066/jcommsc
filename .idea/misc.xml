@@ -81,6 +81,7 @@
         <option value="$PROJECT_DIR$/springboot2/pom.xml" />
         <option value="$PROJECT_DIR$/springboot_mq/pom.xml" />
         <option value="$PROJECT_DIR$/springboot_leetcode/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_common/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

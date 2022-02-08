@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="springboot_common" />
         <module name="springcloud-jdbc" />
         <module name="springcloud-rpc" />
         <module name="springcloud-common (1)" />
@@ -21,6 +22,7 @@
     <bytecodeTargetLevel target="1.8">
       <module name="jcommsc" target="1.8" />
       <module name="springboot2" target="1.8" />
+      <module name="springboot_common" target="1.8" />
       <module name="springboot_leetcode" target="1.8" />
       <module name="springboot_mq" target="1.8" />
       <module name="springcloud-common" target="1.8" />
@@ -45,6 +47,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="springboot2" options="-parameters" />
+      <module name="springboot_common" options="-parameters" />
       <module name="springboot_leetcode" options="-parameters" />
       <module name="springboot_mq" options="-parameters" />
       <module name="springcloud-job" options="-parameters" />
