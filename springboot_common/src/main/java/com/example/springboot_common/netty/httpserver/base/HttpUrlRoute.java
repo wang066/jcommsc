@@ -1,4 +1,4 @@
-package cn.jcomm.test.netty.httpserver.base;
+package com.example.springboot_common.netty.httpserver.base;
 
 import io.netty.handler.codec.http.FullHttpRequest;
 

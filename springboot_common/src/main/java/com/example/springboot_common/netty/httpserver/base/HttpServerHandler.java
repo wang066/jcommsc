@@ -1,4 +1,4 @@
-package cn.jcomm.test.netty.httpserver.base;
+package com.example.springboot_common.netty.httpserver.base;
 
 import com.alibaba.fastjson.JSON;
 import io.netty.channel.ChannelHandlerContext;

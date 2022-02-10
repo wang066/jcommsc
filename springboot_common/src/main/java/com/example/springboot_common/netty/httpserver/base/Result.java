@@ -1,4 +1,4 @@
-package cn.jcomm.test.netty.httpserver.base;
+package com.example.springboot_common.netty.httpserver.base;
 
 /**
  * Created by jowang on 2017/4/20 0020.

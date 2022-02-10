@@ -1,4 +1,4 @@
-package cn.jcomm.test.netty;
+package com.example.springboot_common.netty;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandler;

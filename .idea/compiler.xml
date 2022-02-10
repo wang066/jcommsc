@@ -14,6 +14,7 @@
         <module name="springboot_leetcode" />
         <module name="springcloud-mybatis" />
         <module name="springcloud-common" />
+        <module name="springboot_dubbo" />
         <module name="springcloud-dubbo-user-api" />
         <module name="springboot_mq" />
         <module name="springboot2" />
@@ -23,6 +24,7 @@
       <module name="jcommsc" target="1.8" />
       <module name="springboot2" target="1.8" />
       <module name="springboot_common" target="1.8" />
+      <module name="springboot_dubbo" target="1.8" />
       <module name="springboot_leetcode" target="1.8" />
       <module name="springboot_mq" target="1.8" />
       <module name="springcloud-common" target="1.8" />
@@ -48,6 +50,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="springboot2" options="-parameters" />
       <module name="springboot_common" options="-parameters" />
+      <module name="springboot_dubbo" options="-parameters" />
       <module name="springboot_leetcode" options="-parameters" />
       <module name="springboot_mq" options="-parameters" />
       <module name="springcloud-job" options="-parameters" />
