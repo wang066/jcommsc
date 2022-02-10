@@ -1,4 +1,4 @@
-package com.example.springboot2.pipline;
+package com.example.springboot_common.pipline;
 
 import java.util.LinkedList;
 import java.util.List;

@@ -30,7 +30,6 @@ class EchoServer {
 //        EventLoopGroup workerEventLoopGroup = new NioEventLoopGroup(10);
 //        serverBootstrap.group(bossEventLoopGroup, workerEventLoopGroup);
 
-
         EventLoopGroup group = new NioEventLoopGroup();
         ServerBootstrap b = new ServerBootstrap()
                 .group(group)
