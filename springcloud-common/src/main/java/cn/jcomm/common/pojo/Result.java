@@ -12,13 +12,20 @@ import static cn.jcomm.common.constant.SystemConst.SUCCESS;
  * 可作为 RPC webapi 等结果基类
  */
 @Data
-@AllArgsConstructor
 public class Result<T> {
 
     private int code;
     private boolean success;
     private String msg;
     private T data;
+
+
+    public Result(int code, boolean success, String msg, T data) {
+        this.code = code;
+        this.success = success;
+        this.msg = msg;
+        this.data = data;
+    }
 
     public static Result error(String msg) {
         return new Result(FAIL, false, msg, null);

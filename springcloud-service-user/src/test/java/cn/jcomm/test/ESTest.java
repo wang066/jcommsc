@@ -1,4 +1,4 @@
-package cn.jcomm.test;
+package com.example.springboot2.test;
 
 import org.junit.After;
 import org.junit.Before;
