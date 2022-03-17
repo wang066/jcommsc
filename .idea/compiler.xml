@@ -13,7 +13,6 @@
         <module name="springcloud-common (1)" />
         <module name="springboot_leetcode" />
         <module name="springcloud-mybatis" />
-        <module name="springcloud-common" />
         <module name="springboot_dubbo" />
         <module name="springcloud-dubbo-user-api" />
         <module name="springboot_mq" />

@@ -206,7 +206,7 @@
     <orderEntry type="library" name="Maven: org.springframework.statemachine:spring-statemachine-core:1.2.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-tx:4.3.10.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-messaging:4.3.10.RELEASE" level="project" />
-    <orderEntry type="module" module-name="springcloud-common" />
+    <orderEntry type="library" name="Maven: cn.jcomm:springcloud-common:0.0.1-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-all:4.1.6.Final" level="project" />
     <orderEntry type="library" name="Maven: org.redisson:redisson:3.3.2" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-common:4.1.8.Final" level="project" />

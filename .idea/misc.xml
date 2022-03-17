@@ -81,14 +81,15 @@
         <option value="$PROJECT_DIR$/springboot2/pom.xml" />
         <option value="$PROJECT_DIR$/springboot_mq/pom.xml" />
         <option value="$PROJECT_DIR$/springboot_leetcode/pom.xml" />
-        <option value="$PROJECT_DIR$/springboot_common/pom.xml" />
         <option value="$PROJECT_DIR$/springboot_dubbo/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_common/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/LRPC/pom.xml" />
         <option value="$PROJECT_DIR$/rpc0/pom.xml" />
+        <option value="$PROJECT_DIR$/springcloud-common/pom.xml" />
         <option value="$PROJECT_DIR$/springcloud-config-server/pom.xml" />
         <option value="$PROJECT_DIR$/springcloud-eureka-server/pom.xml" />
         <option value="$PROJECT_DIR$/springcloud-gateway/pom.xml" />

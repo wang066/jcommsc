@@ -8,7 +8,6 @@
       <module fileurl="file://$PROJECT_DIR$/springboot_dubbo/springboot_dubbo.iml" filepath="$PROJECT_DIR$/springboot_dubbo/springboot_dubbo.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot_leetcode/springboot_leetcode.iml" filepath="$PROJECT_DIR$/springboot_leetcode/springboot_leetcode.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot_mq/springboot_mq.iml" filepath="$PROJECT_DIR$/springboot_mq/springboot_mq.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springcloud-common/springcloud-common.iml" filepath="$PROJECT_DIR$/springcloud-common/springcloud-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud-dubbo-user-api/springcloud-dubbo-user-api.iml" filepath="$PROJECT_DIR$/springcloud-dubbo-user-api/springcloud-dubbo-user-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud-jdbc/springcloud-jdbc.iml" filepath="$PROJECT_DIR$/springcloud-jdbc/springcloud-jdbc.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud-mybatis/springcloud-mybatis.iml" filepath="$PROJECT_DIR$/springcloud-mybatis/springcloud-mybatis.iml" />
