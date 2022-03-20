@@ -1,2 +1,0 @@
-data object
-实体类 dao 层使用

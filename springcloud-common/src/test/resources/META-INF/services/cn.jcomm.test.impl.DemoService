@@ -1,5 +1,0 @@
-#English implementation
-cn.jcomm.test.impl.EnglishDemoServiceImpl
-
-#Chinese implementation
-cn.jcomm.test.impl.ChineseDemoServiceImpl
