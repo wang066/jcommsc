@@ -8,7 +8,7 @@ import java.util.Deque;
 import java.util.List;
 
 public class 全排列46 {
-
+    // https://leetcode-cn.com/problems/permutations/
     static class Solution {
         public static List<List<Integer>> permute(int[] nums) {
             List<List<Integer>> result = new ArrayList<>();
