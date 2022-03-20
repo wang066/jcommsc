@@ -9,8 +9,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springcloud-infrastructure" />
         <module name="springcloud-gateway" />
-        <module name="springcloud-service-order" />
         <module name="springcloud-service-user-api" />
+        <module name="springcloud-service-order" />
         <module name="springcloud-eureka-server" />
         <module name="springcloud-rpc" />
         <module name="springcloud-common (1)" />
@@ -22,8 +22,8 @@
         <module name="springcloud-common" />
         <module name="springcloud-mybatis" />
         <module name="springcloud-dubbo-user-api" />
-        <module name="springcloud-job" />
         <module name="springcloud-service-order-api" />
+        <module name="springcloud-job" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
