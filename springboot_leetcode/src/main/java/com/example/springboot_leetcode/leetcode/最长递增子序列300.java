@@ -1,5 +1,7 @@
 package com.example.springboot_leetcode.leetcode;
 
+import java.util.Arrays;
+
 // https://leetcode-cn.com/problems/longest-increasing-subsequence/
 public class 最长递增子序列300 {
 
@@ -46,6 +48,7 @@ public class 最长递增子序列300 {
                 }
                 max = Math.max(max, dp[i]);
             }
+            System.out.println("dp[]:" + Arrays.toString(dp));
 
             return max;
         }
