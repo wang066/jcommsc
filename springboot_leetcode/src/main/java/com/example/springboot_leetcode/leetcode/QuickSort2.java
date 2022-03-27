@@ -10,7 +10,7 @@ public class QuickSort2 {
      * @param i 元素1下标
      * @param j 元素2下标
      */
-    private void swap(int[] nums, int i, int j) {
+    private static void swap(int[] nums, int i, int j) {
         int temp = nums [i];
         nums [i] = nums [j];
         nums [j] = temp;
@@ -23,7 +23,7 @@ public class QuickSort2 {
      * @param left 划分左边界
      * @param right 划分右边界
      */
-    private void quickSort(int[] nums, int left, int right) {
+    private static void quickSort(int[] nums, int left, int right) {
         // 递归返回条件，和分区排序结束
         if (right-left <=0) {
             return;
@@ -56,7 +56,7 @@ public class QuickSort2 {
      * @param nums 输入数组
      * @return 返回完成排序的数组
      */
-    public int[] sortArray(int[] nums) {
+    public static int[] sortArray(int[] nums) {
         if (nums == null || nums.length ==0) {
             return nums;
         }
@@ -65,9 +65,8 @@ public class QuickSort2 {
     }
 
     public static void main(String[] args) {
-        QuickSort2 quickSort2=new QuickSort2();
         int[] array = {6,72,113,11,23};
-        array= quickSort2.sortArray(array);
+        array= QuickSort2.sortArray(array);
         System.out.println("排序后的结果");
         System.out.println(Arrays.toString(array));
 

@@ -1,4 +1,4 @@
-package com.example.springboot_leetcode;
+package com.example.springboot_leetcode.leetcode;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

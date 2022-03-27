@@ -34,30 +34,30 @@ public class 岛屿数量 {
             }
         }
 
-        public static void clear(char[][] grid, int x, int y) {
-            for (int i = x; i < grid.length; i++) {
-                for (int j = y; j < grid[i].length; j++) {
-                    if (grid[i][j] == '1') {
-                        grid[i][j] = '0';
-                        clearY(grid, i + 1, j);
-                    } else {
-                        return;
-                    }
-                }
-            }
-        }
-
-
-        private static void clearY(char[][] grid, int x, int y) {
-            for (int i = x; i < grid.length; i++) {
-                if (grid[i][y] == '1') {
-                    grid[i][y] = '0';
-                    clear(grid, i, y);
-                } else {
-                    return;
-                }
-            }
-        }
+        // public static void clear(char[][] grid, int x, int y) {
+        //     for (int i = x; i < grid.length; i++) {
+        //         for (int j = y; j < grid[i].length; j++) {
+        //             if (grid[i][j] == '1') {
+        //                 grid[i][j] = '0';
+        //                 clearY(grid, i + 1, j);
+        //             } else {
+        //                 return;
+        //             }
+        //         }
+        //     }
+        // }
+        //
+        //
+        // private static void clearY(char[][] grid, int x, int y) {
+        //     for (int i = x; i < grid.length; i++) {
+        //         if (grid[i][y] == '1') {
+        //             grid[i][y] = '0';
+        //             clear(grid, i, y);
+        //         } else {
+        //             return;
+        //         }
+        //     }
+        // }
 
 
         public static void main(String[] args) {

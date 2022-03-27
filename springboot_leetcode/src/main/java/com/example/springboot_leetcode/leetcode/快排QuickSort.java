@@ -2,7 +2,7 @@ package com.example.springboot_leetcode.leetcode;
 
 import java.util.Arrays;
 
-public class QuickSort {
+public class 快排QuickSort {
 
     public static int partition(int[] array, int low, int high) {
         // 取最后一个元素作为中心元素
@@ -23,7 +23,7 @@ public class QuickSort {
             System.out.println(Arrays.toString(array));
         }
         // 将中心元素和指针指向的元素交换位置
-        int temp = array[pointer ];
+        int temp = array[pointer];
         array[pointer] = array[high];
         array[high] = temp;
         return pointer;
@@ -34,15 +34,15 @@ public class QuickSort {
             // 获取划分子数组的位置
             int position = partition(array, low, high);
             // 左子数组递归调用
-            quickSort(array, low, position -1);
+            quickSort(array, low, position - 1);
             // 右子数组递归调用
             quickSort(array, position + 1, high);
         }
     }
 
     public static void main(String[] args) {
-        int[] array = {6,72,113,11,23};
-        quickSort(array, 0, array.length -1);
+        int[] array = {6, 72, 113, 11, 23};
+        quickSort(array, 0, array.length - 1);
         System.out.println("排序后的结果");
         System.out.println(Arrays.toString(array));
     }

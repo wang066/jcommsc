@@ -12,31 +12,6 @@
     <file url="file://$PROJECT_DIR$/springboot_leetcode/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot_mq/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot_mq/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springcloud-common" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springcloud-common/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springcloud-config-server" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springcloud-config-server/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springcloud-dubbo-user-api" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springcloud-eureka-server" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springcloud-eureka-server/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springcloud-gateway" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springcloud-gateway/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springcloud-hystrix-dashboard" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springcloud-hystrix-dashboard/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springcloud-hystrix-turbine" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springcloud-hystrix-turbine/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springcloud-infrastructure" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springcloud-jdbc" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springcloud-mybatis" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springcloud-rpc" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springcloud-service-order" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springcloud-service-order-api" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springcloud-service-order-api/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springcloud-service-order/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springcloud-service-user" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springcloud-service-user-api" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springcloud-service-user-api/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springcloud-service-user/src/main/java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
