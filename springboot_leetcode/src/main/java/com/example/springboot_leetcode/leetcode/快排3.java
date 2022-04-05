@@ -46,7 +46,7 @@ public class 快排3 {
     public static class QuickSort4 {
 
         public static void main(String[] args) {
-            int n[] = { 6, 5, 2, 7, 3, 9, 8, 4, 10, 1 };
+            int n[] = { 3,2,3,1,2,4,5,5,6 };
             quicksort(n);
             System.out.print("快排结果：");
             for (int m : n) {
