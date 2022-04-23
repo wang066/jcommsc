@@ -2,6 +2,7 @@ package com.example.springboot2.concurrency.b.b3;
 
 import com.alibaba.fastjson.JSON;
 import com.google.common.util.concurrent.MoreExecutors;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -71,6 +72,7 @@ public class _Test6 {
         assertEquals(Arrays.asList(1, 2, 3, 4), together);
     }
 
+    @Test
     public void test3() {
         //Stream.of(1, 2,3, 4, 5).reduce((i1, i2) -> i1 + i2).;
         Integer iResult1 = Stream.of(1, 2, 3, 4, 5).reduce((i1, i2) -> i1 + i2).get();
