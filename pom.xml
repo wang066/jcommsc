@@ -10,7 +10,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>springcloud-common</module>
+<!--        <module>springcloud-common</module>-->
 <!--        <module>springcloud-config-server</module>-->
 <!--        <module>springcloud-eureka-server</module>-->
 <!--        <module>springcloud-gateway</module>-->
@@ -205,11 +205,11 @@
         </dependency>
 
 
-        <dependency>
-            <groupId>cn.jcomm</groupId>
-            <artifactId>springcloud-common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>cn.jcomm</groupId>-->
+<!--            <artifactId>springcloud-common</artifactId>-->
+<!--            <version>0.0.1-SNAPSHOT</version>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>org.apache.curator</groupId>
