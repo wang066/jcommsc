@@ -46,6 +46,7 @@ public class 最长递增子序列300 {
                         dp[i] = Math.max(dp[i], dp[j] + 1);
                     }
                 }
+                System.out.println("dp["+i+"]:" + Arrays.toString(dp));
                 max = Math.max(max, dp[i]);
             }
             System.out.println("dp[]:" + Arrays.toString(dp));
@@ -54,9 +55,9 @@ public class 最长递增子序列300 {
         }
 
         public static void main(String[] args) {
-            System.out.println(lengthOfLIS(new int[]{10, 9, 2, 5, 3, 7, 101, 18}));
+            // System.out.println(lengthOfLIS(new int[]{10, 9, 2, 5, 3, 7, 101, 18}));
             System.out.println(lengthOfLIS动态规划(new int[]{10, 9, 2, 5, 3, 7, 101, 18}));
-            System.out.println(lengthOfLIS动态规划(new int[]{1, 9, 2, 5, 3, 7, 101, 18}));
+            // System.out.println(lengthOfLIS动态规划(new int[]{1, 9, 2, 5, 3, 7, 101, 18}));
         }
     }
 

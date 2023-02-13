@@ -70,7 +70,7 @@ public class _Test6 {
 
 
         List<Integer> together = Stream.of(Arrays.asList(1, 2), Arrays.asList(3, 4))
-                .flatMap(numbers -> numbers.stream())
+                .flatMap(Collection::stream)
                 .collect(Collectors.toList());
         assertEquals(Arrays.asList(1, 2, 3, 4), together);
     }

@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.FieldNameConstants;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -18,6 +19,10 @@ public class Springboot2Application7 {
     public static void main(String[] args) {
         ConfigurableApplicationContext applicationContext = SpringApplication.run(Springboot2Application7.class, args);
         System.out.println("容器启动完成");
+    }
+
+    public static class CacheWrapper implements BeanPostProcessor{
+
     }
 
     /**
