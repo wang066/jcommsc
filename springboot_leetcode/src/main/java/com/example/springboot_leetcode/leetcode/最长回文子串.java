@@ -5,30 +5,41 @@ public class 最长回文子串 {
 
     static class Solution {
         public static String longestPalindrome(String s) {
-            if (s == null || s.length() < 1 || s.length() > 1000) {
+            int len = s.length();
+            if (s == null || len < 1 || len > 1000) {
                 return null;
             }
             int maxLen = 1;
-            String maxStr = "";
+            int start = 0;
+            boolean[][] dp = new boolean[len][len];
 
-            for (int i = 0; i < s.length(); i++) {
+            for (int i = 0; i < len; i++) {
 
-                // char c = s.charAt(i);
-                // int offset = 0;
-                // int left = i - offset;
-                // int right = i + offset
-                // while (s.charAt(i - 1) == s.charAt(right)) {
-                //     offset
-                //     left > 0 && right < s.length() && s.charAt(i - 1) == s.charAt(right)
-                //     maxLen =
-                // }
             }
 
-            return maxStr;
+            return s.substring(start, maxLen);
         }
 
         public static void main(String[] args) {
 
+        }
+    }
+
+    public static class Solution121买卖股票的最佳时机 {
+        public int maxProfit(int[] prices) {
+            if (prices == null) {
+                return 0;
+            }
+            int min = Integer.MAX_VALUE;
+            int cha = 0;
+            for (int i = 0; i < prices.length; i++) {
+                if (prices[i] - min > cha) {
+                    cha = prices[i] - min;
+                } else if (min > prices[i]) {
+                    min = prices[i];
+                }
+            }
+            return cha;
         }
     }
 }

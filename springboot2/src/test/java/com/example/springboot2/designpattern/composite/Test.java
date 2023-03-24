@@ -1,5 +1,7 @@
 package com.example.springboot2.designpattern.composite;
 
+import com.google.common.base.Supplier;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -29,5 +31,19 @@ public class Test {
         } else {
             return null;
         }
+    }
+
+    @org.junit.jupiter.api.Test
+    public void test1() {
+        Supplier<Integer> supplier = () -> {
+            try {
+                return 1;
+            } catch (Exception e) {
+                return 2;
+            } finally {
+                return 3;
+            }
+        };
+        System.out.println(supplier.get());
     }
 }
