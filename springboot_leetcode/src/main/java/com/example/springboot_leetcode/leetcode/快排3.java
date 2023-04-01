@@ -1,46 +1,48 @@
 package com.example.springboot_leetcode.leetcode;
 
 import java.util.Arrays;
+import java.util.Random;
 
 public class 快排3 {
     public class QuickSort  {
 
-        public int[] sort(int[] sourceArray) throws Exception {
-            // 对 arr 进行拷贝，不改变参数内容
-            int[] arr = Arrays.copyOf(sourceArray, sourceArray.length);
-
-            return quickSort(arr, 0, arr.length - 1);
+        public int[] sortArray(int[] nums) {
+            randomizedQuicksort(nums, 0, nums.length - 1);
+            return nums;
         }
 
-        private int[] quickSort(int[] arr, int left, int right) {
-            if (left < right) {
-                int partitionIndex = partition(arr, left, right);
-                quickSort(arr, left, partitionIndex - 1);
-                quickSort(arr, partitionIndex + 1, right);
+        public void randomizedQuicksort(int[] nums, int l, int r) {
+            if (l < r) {
+                int pos = randomizedPartition(nums, l, r);
+                randomizedQuicksort(nums, l, pos - 1);
+                randomizedQuicksort(nums, pos + 1, r);
             }
-            return arr;
         }
 
-        private int partition(int[] arr, int left, int right) {
-            // 设定基准值（pivot）
-            int pivot = left;
-            int index = pivot + 1;
-            for (int i = index; i <= right; i++) {
-                if (arr[i] < arr[pivot]) {
-                    swap(arr, i, index);
-                    index++;
+        public int randomizedPartition(int[] nums, int l, int r) {
+            int i = new Random().nextInt(r - l + 1) + l; // 随机选一个作为我们的主元
+            swap(nums, r, i);
+            return partition(nums, l, r);
+        }
+
+        public int partition(int[] nums, int l, int r) {
+            int pivot = nums[r];
+            int i = l - 1;
+            for (int j = l; j <= r - 1; ++j) {
+                if (nums[j] <= pivot) {
+                    i = i + 1;
+                    swap(nums, i, j);
                 }
             }
-            swap(arr, pivot, index - 1);
-            return index - 1;
+            swap(nums, i + 1, r);
+            return i + 1;
         }
 
-        private void swap(int[] arr, int i, int j) {
-            int temp = arr[i];
-            arr[i] = arr[j];
-            arr[j] = temp;
+        private void swap(int[] nums, int i, int j) {
+            int temp = nums[i];
+            nums[i] = nums[j];
+            nums[j] = temp;
         }
-
     }
 
     public static class QuickSort4 {
