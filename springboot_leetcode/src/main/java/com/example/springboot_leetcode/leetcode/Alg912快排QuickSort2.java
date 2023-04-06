@@ -1,8 +1,11 @@
 package com.example.springboot_leetcode.leetcode;
 
 import java.util.Arrays;
-
-public class QuickSort2 {
+// 作者：wonderzlf
+// 链接：https://leetcode-cn.com/problems/sort-an-array/solution/javakuai-su-pai-xu-jian-xi-by-wonderzlf/
+// 来源：力扣（LeetCode）
+// 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+public class Alg912快排QuickSort2 {
 
     /**
      * 数组内元素交换
@@ -66,14 +69,11 @@ public class QuickSort2 {
 
     public static void main(String[] args) {
         int[] array = {6,72,113,11,23};
-        array= QuickSort2.sortArray(array);
+        array= Alg912快排QuickSort2.sortArray(array);
         System.out.println("排序后的结果");
         System.out.println(Arrays.toString(array));
 
     }
 
-    // 作者：wonderzlf
-    // 链接：https://leetcode-cn.com/problems/sort-an-array/solution/javakuai-su-pai-xu-jian-xi-by-wonderzlf/
-    // 来源：力扣（LeetCode）
-    // 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
 }

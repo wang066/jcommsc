@@ -2,8 +2,11 @@ package com.example.springboot_leetcode.leetcode;
 
 import java.util.Arrays;
 import java.util.Random;
-
-public class 快排3 {
+// 作者：wonderzlf
+// 链接：https://leetcode-cn.com/problems/sort-an-array/solution/javakuai-su-pai-xu-jian-xi-by-wonderzlf/
+// 来源：力扣（LeetCode）
+// 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+public class Alg912快排3 {
     public class QuickSort  {
 
         public int[] sortArray(int[] nums) {
