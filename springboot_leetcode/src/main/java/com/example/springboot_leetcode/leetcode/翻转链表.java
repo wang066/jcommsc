@@ -7,7 +7,7 @@ public class 翻转链表 {
         ListNode pre = null;
         ListNode cur = head;
         ListNode tmp = null;
-        while(cur!=null) {
+        while (cur != null) {
             //记录当前节点的下一个节点
             tmp = cur.next;
             //然后将当前节点指向pre
@@ -28,21 +28,22 @@ public class 翻转链表 {
             node = node.next;
         }
     }
+
+    static class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode() {
+        }
+
+        ListNode(int val) {
+            this.val = val;
+        }
+
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
+    }
 }
 
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode() {
-    }
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-}
