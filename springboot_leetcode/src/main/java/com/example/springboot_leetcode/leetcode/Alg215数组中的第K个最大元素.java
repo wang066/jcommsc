@@ -3,7 +3,7 @@ package com.example.springboot_leetcode.leetcode;
 import java.util.Arrays;
 
 // https://leetcode-cn.com/problems/kth-largest-element-in-an-array/
-public class 数组中的第K个最大元素215 {
+public class Alg215数组中的第K个最大元素 {
 
     static class Solution {
         public static void main(String[] args) {

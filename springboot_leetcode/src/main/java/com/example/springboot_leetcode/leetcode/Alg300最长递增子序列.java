@@ -3,7 +3,7 @@ package com.example.springboot_leetcode.leetcode;
 import java.util.Arrays;
 
 // https://leetcode-cn.com/problems/longest-increasing-subsequence/
-public class 最长递增子序列300 {
+public class Alg300最长递增子序列 {
 
     static class Solution {
         public static int lengthOfLIS(int[] nums) {
