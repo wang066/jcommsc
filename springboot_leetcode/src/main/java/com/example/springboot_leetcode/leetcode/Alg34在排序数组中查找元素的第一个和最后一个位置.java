@@ -14,6 +14,7 @@ public class Alg34在排序数组中查找元素的第一个和最后一个位�
     // 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
     // https://www.zhihu.com/question/36132386
+
     static class Solution {
         public int[] searchRange(int[] nums, int target) {
             if (nums.length == 0) return new int[]{-1, -1};

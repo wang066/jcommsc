@@ -1,10 +1,11 @@
 package com.example.springboot_leetcode.leetcode;
 
 
-public class 动态规划 {
+public class Alg5最长回文字符串 {
 
     // https://leetcode.cn/problems/longest-palindromic-substring/?favorite=2cktkvj
-    static class Solution最长回文字符串 {
+    // 动态规划
+    static class Solution {
         public static String longestPalindrome(String s) {
 
             if (s == null || s.length() < 1 || s.length() > 1000) {
@@ -52,21 +53,4 @@ public class 动态规划 {
         }
     }
 
-    public static class Solution121买卖股票的最佳时机 {
-        public int maxProfit(int[] prices) {
-            if (prices == null) {
-                return 0;
-            }
-            int min = Integer.MAX_VALUE;
-            int cha = 0;
-            for (int i = 0; i < prices.length; i++) {
-                if (prices[i] - min > cha) {
-                    cha = prices[i] - min;
-                } else if (min > prices[i]) {
-                    min = prices[i];
-                }
-            }
-            return cha;
-        }
-    }
 }
