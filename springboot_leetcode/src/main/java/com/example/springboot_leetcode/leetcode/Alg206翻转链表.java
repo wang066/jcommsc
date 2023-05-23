@@ -1,6 +1,6 @@
 package com.example.springboot_leetcode.leetcode;
 
-public class 翻转链表 {
+public class Alg206翻转链表 {
 
     public static ListNode reverseList(ListNode head) {
         //申请节点，pre和 cur，pre指向null
@@ -26,23 +26,6 @@ public class 翻转链表 {
         while (node != null) {
             System.out.println(node.val);
             node = node.next;
-        }
-    }
-
-    static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
         }
     }
 }

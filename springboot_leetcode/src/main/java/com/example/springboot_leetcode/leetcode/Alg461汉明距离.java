@@ -1,6 +1,6 @@
 package com.example.springboot_leetcode.leetcode;
 
-public class 汉明距离 {
+public class Alg461汉明距离 {
 
     static class Solution {
         public static int hammingDistance(int x, int y) {
