@@ -19,6 +19,7 @@ class Springboot2ApplicationTests {
     @AllArgsConstructor
     public static class User {
         private int age;
+        private String name;
     }
 
     public static class UserObjectFactory implements ObjectFactory<User> {
